@@ -6,8 +6,8 @@ export const dynamic = 'force-dynamic'
 // The recurring Prices for the CCM subscription, created in Stripe (live
 // mode). Not secrets, safe to keep in source.
 const PRICE_IDS = {
-  monthly: 'price_1U9uhrFv2iaRvQLl1iOr7hGl', // $997/month
-  annual: 'price_1U9xHfFv2iaRvQLlRBc9rF3X', // $9,970/year, 2 months free
+  monthly: 'price_1UO1JvFv2iaRvQLlMhP0Juqb', // $697/month
+  annual: 'price_1UO1M6Fv2iaRvQLluJTT1fMp', // $6,690/year, about 20% off monthly
 } as const
 
 type Plan = keyof typeof PRICE_IDS
@@ -17,8 +17,8 @@ type Plan = keyof typeof PRICE_IDS
  * browser straight to Stripe's hosted checkout page. A plain
  * <a href="/api/checkout"> (or ?plan=annual) works with no client JS required.
  *
- * allow_promotion_codes lets a monthly subscriber type CCM697 for $300 off,
- * forever. Annual is already the discounted tier, so promo codes are not
+ * allow_promotion_codes lets a monthly subscriber enter a Stripe promo code
+ * (CCM697 still exists in Stripe but is no longer advertised). Annual is already the discounted tier, so promo codes are not
  * offered there.
  *
  * Requires STRIPE_SECRET_KEY in the environment. That key is never
