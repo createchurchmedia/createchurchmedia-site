@@ -8,7 +8,7 @@ tags:
   - "Fishers"
   - "subscription design"
 image: "/portfolio/social-summer-sundays.webp"
-tldr: "Fishers churches usually run small creative teams handling a lot of weekly design, which is exactly the situation subscription design is built for. Instead of quoting every project or hiring part-time, a church gets one designer for a flat $997 a month with unlimited requests. For most Fishers congregations that math beats both freelance and an in-house hire."
+tldr: "Fishers churches usually run small creative teams handling a lot of weekly design, which is exactly the situation subscription design is built for. Instead of quoting every project or hiring part-time, a church gets one designer for a flat $697 a month with unlimited requests. For most Fishers congregations that math beats both freelance and an in-house hire."
 faqs:
   - question: "Why does subscription design fit Fishers churches well?"
     answer: "Most churches in Fishers have steady weekly design needs but not enough volume to justify a full-time designer, and freelance gets expensive and slow when you are quoting every job. Subscription sits in the gap. You get a dedicated designer and predictable cost without managing an employee. For a community like Fishers with a lot of active mid-sized churches, that fit is common."
@@ -38,7 +38,7 @@ Here is what working together looks like for a Fishers church. You send requests
 
 Because I stay inside your church's brand month after month, I am not guessing at your look. The second month is faster than the first, and the sixth is faster than the second. That compounding familiarity is the part freelance can never match.
 
-It is a flat $997 a month for unlimited requests and unlimited revisions. No per-project quotes. No rush fees when a Saturday emergency comes up before a big Sunday.
+It is a flat $697 a month for unlimited requests and unlimited revisions. No per-project quotes. No rush fees when a Saturday emergency comes up before a big Sunday.
 
 ## Why the math works for mid-sized churches
 
