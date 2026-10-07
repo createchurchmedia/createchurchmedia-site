@@ -31,7 +31,7 @@ export default function StartPage() {
             </h1>
             <p className="mt-6 text-lg text-neutral-600">
               Both plans give you the same access, same designer, same turnaround.
-              The annual plan saves you $1,994 compared to paying month to month.
+              The annual plan saves you $1,674 compared to paying month to month.
             </p>
           </FadeIn>
         </Container>
@@ -49,7 +49,7 @@ export default function StartPage() {
               </p>
               <p className="mt-6 flex items-baseline gap-x-2">
                 <span className="font-display text-6xl font-semibold tracking-tight text-neutral-950">
-                  $997
+                  $697
                 </span>
                 <span className="text-base text-neutral-500">/month</span>
               </p>
@@ -67,16 +67,16 @@ export default function StartPage() {
             {/* Annual */}
             <FadeIn className="rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
               <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
-                Annual &mdash; 2 months free
+                Annual, save 20%
               </p>
               <p className="mt-6 flex items-baseline gap-x-2">
                 <span className="font-display text-6xl font-semibold tracking-tight text-white">
-                  $9,970
+                  $6,690
                 </span>
                 <span className="text-base text-neutral-400">/year</span>
               </p>
               <p className="mt-4 text-base text-neutral-300">
-                Billed as one payment, under $10,000. You save $1,994.
+                Billed as one payment. You save $1,674.
               </p>
               <a
                 href="/api/checkout?plan=annual"
