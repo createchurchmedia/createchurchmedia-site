@@ -8,7 +8,7 @@ tags:
   - "Central Indiana"
   - "church design"
 image: "/portfolio/sermon-malachi.webp"
-tldr: "The design problem most Central Indiana churches actually have is not a lack of talent or tools, it is the volunteer treadmill that burns out the one person doing graphics and lets the brand drift every time they leave. Naming that honestly changes the fix. A flat $997 a month subscription takes the weekly load off the volunteer and keeps the brand steady across staff turnover."
+tldr: "The design problem most Central Indiana churches actually have is not a lack of talent or tools, it is the volunteer treadmill that burns out the one person doing graphics and lets the brand drift every time they leave. Naming that honestly changes the fix. A flat $697 a month subscription takes the weekly load off the volunteer and keeps the brand steady across staff turnover."
 faqs:
   - question: "What is the design problem most Central Indiana churches actually face?"
     answer: "It is rarely talent or software. It is that design lands on one already-busy volunteer or staff member who burns out, and when they leave, the brand resets because the knowledge lived in their head. The visible symptom is inconsistent graphics, but the root cause is an unsustainable way of getting the work done. Naming that honestly is the first step to fixing it."
@@ -42,7 +42,7 @@ That is exactly what the subscription does. The weekly design load comes to me i
 
 ## What it costs to step off the treadmill
 
-It is a flat $997 a month for unlimited requests and revisions. One designer, holding your whole system, turning around sermon series, social, slides, signage, and events. For a Central Indiana church, that is usually less than the true cost of the burnout cycle, once you count the volunteer you lose, the recognition you reset, and the scramble every time the work changes hands.
+It is a flat $697 a month for unlimited requests and revisions. One designer, holding your whole system, turning around sermon series, social, slides, signage, and events. For a Central Indiana church, that is usually less than the true cost of the burnout cycle, once you count the volunteer you lose, the recognition you reset, and the scramble every time the work changes hands.
 
 The graphics get better as a side effect. The real win is that the church stops depending on one exhausted person to hold its visual identity together.
 
