@@ -8,7 +8,7 @@ tags:
   - "Westfield"
   - "sermon series"
 image: "/portfolio/sermon-joy-in-every-season.webp"
-tldr: "Sermon series art works in Westfield when it feels current to a young, growing, family-focused community without chasing whatever style is trending. The art should set the tone of the series, match your church's visual system, and hold up across screen, print, and social. I design that for Westfield-area churches on a flat $997 a month subscription."
+tldr: "Sermon series art works in Westfield when it feels current to a young, growing, family-focused community without chasing whatever style is trending. The art should set the tone of the series, match your church's visual system, and hold up across screen, print, and social. I design that for Westfield-area churches on a flat $697 a month subscription."
 faqs:
   - question: "What makes sermon series art connect with a Westfield congregation?"
     answer: "Westfield has grown fast and skews young and family-heavy, so art that feels stale reads as out of touch quickly. The art that connects feels current and warm, sets the actual tone of the series, and looks like it belongs to your specific church. It does not have to be trendy. It has to be intentional and consistent with everything else your church puts out."
@@ -44,6 +44,6 @@ Every series I design for a Westfield church gets built inside that church's vis
 
 Practically, this all runs through the subscription. A Westfield church sends me the series, the dates, and a sense of the tone, and I turn around art in every format the church uses. Screen graphic, social, bulletin, slides, the whole set. As many revisions as it takes until the team loves it.
 
-It is a flat $997 a month for unlimited requests, which means a church can plan a full quarter of series without doing the math on each one. The design stops being a budget decision and becomes a normal part of how the church communicates.
+It is a flat $697 a month for unlimited requests, which means a church can plan a full quarter of series without doing the math on each one. The design stops being a budget decision and becomes a normal part of how the church communicates.
 
 If you lead a church in or around Westfield and your sermon series art has been hit or miss, [join the wait list](/contact) and I will reach out by email when a spot opens.
