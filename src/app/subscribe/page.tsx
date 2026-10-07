@@ -58,19 +58,13 @@ export default function SubscribePage() {
                   </a>
                 </div>
 
-                <p className="mt-4 text-sm text-neutral-500">
-                  Have a referral code? Enter{' '}
-                  <span className="font-medium text-neutral-700">CCM697</span>{' '}
-                  at checkout to drop to $697/month, for as long as you
-                  subscribe.
-                </p>
               </div>
             </FadeIn>
 
             <FadeIn>
               <div className="rounded-3xl bg-neutral-950 p-8 text-white ring-1 ring-inset ring-neutral-900">
                 <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
-                  Annual &mdash; 2 months free
+                  Annual, save 20%
                 </p>
                 <p className="mt-6 flex items-baseline gap-2">
                   <span className="font-display text-5xl font-semibold tracking-tight text-white">
@@ -79,7 +73,7 @@ export default function SubscribePage() {
                   <span className="text-base text-neutral-400">/ year</span>
                 </p>
                 <p className="mt-4 text-base leading-7 text-neutral-300">
-                  Billed as one payment, under $10,000. Save $1,994 compared
+                  Billed as one payment. Save $1,674 compared
                   to paying monthly.
                 </p>
 
@@ -93,10 +87,6 @@ export default function SubscribePage() {
                   </a>
                 </div>
 
-                <p className="mt-4 text-sm text-neutral-400">
-                  Already the discounted tier &mdash; referral codes apply to
-                  the monthly plan only.
-                </p>
               </div>
             </FadeIn>
           </div>

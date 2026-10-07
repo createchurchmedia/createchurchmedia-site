@@ -117,7 +117,7 @@ export default function HomePage() {
         }
       >
         <p>
-          I design for churches on a flat $997 a month subscription. I become your remote graphic designer, on call, with fast turn around times.
+          I design for churches on a flat $697 a month subscription. I become your remote graphic designer, on call, with fast turn around times.
         </p>
       </SectionIntro>
 

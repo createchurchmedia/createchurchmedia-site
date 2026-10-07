@@ -53,7 +53,7 @@ export default function TermsPage() {
             <h2>Price and billing</h2>
             <p>
               The subscription is ${siteConfig.pricing.monthly} a month,
-              billed monthly through Stripe, or ${siteConfig.pricing.annual}{' '}
+              billed monthly through Stripe, or ${siteConfig.pricing.annual.toLocaleString()}{' '}
               billed as a single annual prepay. Billing starts on the day you
               subscribe and renews on that same date each month (or each
               year, on the annual plan) until you cancel.

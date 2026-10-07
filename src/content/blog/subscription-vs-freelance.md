@@ -11,7 +11,7 @@ faqs:
   - question: "When does freelance design make more sense than a subscription?"
     answer: "Freelance is the right call for one-off pieces like a new logo, a single event poster, or a website hero refresh. It's also the right call for churches under 100 attendance, where design needs are too sporadic to justify a monthly fee."
   - question: "What's the real cost gap between freelance and a subscription?"
-    answer: "For a 500-attendance church, project-based freelance usually runs 1,500 to 3,000 a month plus 10 to 15 hours of comms director project management. A flat-fee subscription with Create Church Media runs 997 a month, with no per-project pricing and no project management overhead."
+    answer: "For a 500-attendance church, project-based freelance usually runs 1,500 to 3,000 a month plus 10 to 15 hours of comms director project management. A flat-fee subscription with Create Church Media runs 697 a month, with no per-project pricing and no project management overhead."
   - question: "Will a subscription designer feel less invested than a freelancer?"
     answer: "In my experience the opposite. A freelancer is incentivized to move on to the next client. A subscription designer is incentivized to keep your church happy month after month, which means knowing your brand and your team well enough that you keep renewing."
 ---
@@ -64,7 +64,7 @@ Rough math on a 500-attendance church with typical design needs.
 
 - **Freelance, project-based.** $300 to $1,200 per project, around 3 to 5 projects per month, around $1,500 to $3,000 a month, plus 10 to 15 hours a month of comms director project management.
 - **Full-time designer.** $55,000 to $75,000 a year salary plus benefits, which works out to $5,500 to $8,000 a month effective cost.
-- **Create Church Media subscription.** $997 a month, all-in, no per-project pricing, no comms-director project management overhead.
+- **Create Church Media subscription.** $697 a month, all-in, no per-project pricing, no comms-director project management overhead.
 
 The subscription isn't always the right answer. For churches in the 300 to 1,500 attendance range with steady design needs, including a lot of the churches in Indianapolis I work with, the math is usually obvious once you sit down and run it.
 

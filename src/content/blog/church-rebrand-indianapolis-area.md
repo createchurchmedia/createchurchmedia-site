@@ -8,7 +8,7 @@ tags:
   - "Indianapolis"
   - "church branding"
 image: "/portfolio/sermon-foster-care-christmas.webp"
-tldr: "A church rebrand in the Indianapolis area works when it rolls out in phases over a few months and has someone committed to sustaining it afterward. It fails when everything launches in one Sunday and then drifts. Plan roughly a quarter to design, a month to roll out, and an ongoing plan to hold it. The subscription is built to carry that last phase for a flat $997 a month."
+tldr: "A church rebrand in the Indianapolis area works when it rolls out in phases over a few months and has someone committed to sustaining it afterward. It fails when everything launches in one Sunday and then drifts. Plan roughly a quarter to design, a month to roll out, and an ongoing plan to hold it. The subscription is built to carry that last phase for a flat $697 a month."
 faqs:
   - question: "How long should a church rebrand in the Indianapolis area take?"
     answer: "Plan for roughly a quarter of design and decision work, then about a month of phased rollout, then an ongoing commitment to sustain it. Rushing the design leads to regret, and launching everything in a single Sunday overwhelms people and leaves no room to fix what is not working. A phased timeline over a few months holds far better than a big-bang launch."
@@ -42,7 +42,7 @@ If the plan for phase three is "the volunteer will keep it consistent," the rebr
 
 ## Where the subscription fits
 
-This is exactly the phase the subscription was built to carry. After the rebrand launches, the ongoing design comes to me. Sermon series, social, slides, signage, events, all run through the new system, all held consistent. For a flat $997 a month, the brand you invested in stays the brand people actually see, month after month, instead of slowly eroding.
+This is exactly the phase the subscription was built to carry. After the rebrand launches, the ongoing design comes to me. Sermon series, social, slides, signage, events, all run through the new system, all held consistent. For a flat $697 a month, the brand you invested in stays the brand people actually see, month after month, instead of slowly eroding.
 
 For some Indianapolis-area churches I run all three phases, helping shape the new system and then sustaining it. For others, the rebrand happens elsewhere and the subscription picks up phase three. Either way, the lesson is the same. The launch is not the finish line. It is the start of the part that matters.
 

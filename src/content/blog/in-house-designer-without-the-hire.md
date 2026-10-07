@@ -11,7 +11,7 @@ faqs:
   - question: "At what church size does a full-time designer make sense?"
     answer: "From what I see across Indianapolis and beyond, churches with steady design needs in the 200 to 1,500 attendance range usually can't justify a full-time hire on the math. Once you're past about 1,500 with a multi-person creative team, the in-house model starts to pay off. Below 100 attendance, the volume is too sporadic for either."
   - question: "How is a subscription different from a freelance retainer?"
-    answer: "A retainer usually pays a freelancer to be on call, with project-based pricing on top. A subscription is a flat monthly fee with all design work included. With Create Church Media that fee is 997 a month. No per-project negotiation. No re-onboarding every time."
+    answer: "A retainer usually pays a freelancer to be on call, with project-based pricing on top. A subscription is a flat monthly fee with all design work included. With Create Church Media that fee is 697 a month. No per-project negotiation. No re-onboarding every time."
   - question: "Can a subscription designer really learn our brand the way in-house would?"
     answer: "Yes, when the engagement is long enough. Most of the value of in-house comes from cumulative knowledge of your church, your pastor's voice, and your visual library. That accumulates inside a subscription too. The difference is you aren't paying salary, benefits, or slow-week overhead while it does."
 ---

@@ -8,10 +8,10 @@ tags:
   - "Carmel"
   - "church design"
 image: "/portfolio/sermon-matters-of-the-heart.webp"
-tldr: "A small church in Carmel is reaching a community with high design expectations, so the quality bar is real even when the budget is small. The good news is that consistency is what makes a church look established, regardless of budget. A flat $997 a month subscription gives a small Carmel church the same steady, on-brand design a much larger church would build a team to produce."
+tldr: "A small church in Carmel is reaching a community with high design expectations, so the quality bar is real even when the budget is small. The good news is that consistency is what makes a church look established, regardless of budget. A flat $697 a month subscription gives a small Carmel church the same steady, on-brand design a much larger church would build a team to produce."
 faqs:
   - question: "Can a small Carmel church afford professional church design?"
-    answer: "Yes, and the subscription model is the reason it is affordable. For a flat $997 a month a small Carmel church gets unlimited requests and revisions from one designer, which costs far less than a hire and produces far more consistency than scattered freelance projects. The model was built so smaller churches do not have to choose between professional design and a balanced budget."
+    answer: "Yes, and the subscription model is the reason it is affordable. For a flat $697 a month a small Carmel church gets unlimited requests and revisions from one designer, which costs far less than a hire and produces far more consistency than scattered freelance projects. The model was built so smaller churches do not have to choose between professional design and a balanced budget."
   - question: "Why do design expectations feel higher in Carmel?"
     answer: "Carmel is an affluent, design-aware community where people encounter polished branding constantly, from local businesses to the schools to the city itself. That raises the baseline of what reads as normal. A church does not need to outspend anyone, but it does need to look intentional, because dated or inconsistent design stands out more sharply here than it would elsewhere."
   - question: "What should a small church in Carmel prioritize first?"
@@ -38,7 +38,7 @@ The fix is not to outspend anyone. It is to close the gaps. Get the everyday gra
 
 The trap most small Carmel churches fall into is treating design as a project they cannot afford, so it gets done by whoever is free, in whatever style they default to. That is how the drift starts.
 
-The subscription removes that decision. For a flat $997 a month, a small church gets one designer handling unlimited requests and revisions. Sermon series, social, slides, signage, events. The same person holding the same system every week. That is the same kind of steady, on-brand output a much larger church would hire a team to produce, sized and priced for a church that does not have a team.
+The subscription removes that decision. For a flat $697 a month, a small church gets one designer handling unlimited requests and revisions. Sermon series, social, slides, signage, events. The same person holding the same system every week. That is the same kind of steady, on-brand output a much larger church would hire a team to produce, sized and priced for a church that does not have a team.
 
 ## Start with what people see most
 

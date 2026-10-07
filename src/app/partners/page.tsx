@@ -28,7 +28,7 @@ const HOW_IT_WORKS = [
   {
     step: '03',
     title: 'Earn 10% every month',
-    body: 'When a church subscribes through your link, you earn 10% of their monthly subscription for as long as they stay. $997/month subscription = $99.70 to you, every month.',
+    body: 'When a church subscribes through your link, you earn 10% of their monthly subscription for as long as they stay. $697/month subscription = $69.70 to you, every month.',
   },
 ]
 
@@ -122,7 +122,7 @@ export default function PartnersPage() {
               10% flat, every month.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-neutral-300">
-              The $997/month subscription pays you $99.70 every month the church
+              The $697/month subscription pays you $69.70 every month the church
               stays subscribed. There&rsquo;s no cap. If you refer three churches
               that stay for a year, that&rsquo;s over $3,500.
             </p>

@@ -8,14 +8,14 @@ tags:
   - "Indianapolis"
   - "church branding"
 image: "/portfolio/sermon-this-is-church.webp"
-tldr: "Branding helps Indianapolis churches grow because it makes them recognizable across every place a person might encounter them. A church that looks the same on Instagram, in the lobby, and on a yard sign earns trust faster than one that looks different everywhere. I help Indianapolis-area churches build and hold that consistency through a flat $997 a month design subscription."
+tldr: "Branding helps Indianapolis churches grow because it makes them recognizable across every place a person might encounter them. A church that looks the same on Instagram, in the lobby, and on a yard sign earns trust faster than one that looks different everywhere. I help Indianapolis-area churches build and hold that consistency through a flat $697 a month design subscription."
 faqs:
   - question: "Does branding actually help a church in Indianapolis grow?"
     answer: "Yes, but slowly and through recognition rather than a single viral moment. When your church looks consistent across social, print, and signage, people in the Indianapolis area start to recognize you before they ever attend. That recognition lowers the hesitation a first-time visitor feels. It compounds over years, which is exactly why so many churches underinvest in it early."
   - question: "What does church branding include beyond a logo?"
     answer: "A logo is the smallest piece. Real church branding includes your typeface choices, your color story, your photography style, your sermon series template language, and the way all of it stays consistent over time. The logo gets the attention, but the system around it is what people actually recognize week to week."
   - question: "How do Indianapolis churches keep branding consistent without a staff designer?"
-    answer: "Most do it by handing the work to one outside designer who holds the system for them. That is what the subscription I run does. Instead of five volunteers each interpreting the brand differently, one designer keeps every sermon series, social post, and sign speaking the same visual language for a flat $997 a month."
+    answer: "Most do it by handing the work to one outside designer who holds the system for them. That is what the subscription I run does. Instead of five volunteers each interpreting the brand differently, one designer keeps every sermon series, social post, and sign speaking the same visual language for a flat $697 a month."
 ---
 
 There is a version of church branding that makes pastors nervous, and they are right to be nervous about it. The version where a church spends a fortune to look like a tech startup, swaps warmth for polish, and ends up feeling like a brand instead of a body. That is not what I am talking about when I say branding grows reach.
@@ -50,6 +50,6 @@ A brand that only works in one of these places is not really a brand. It is a lo
 
 The hard part of church branding is not designing it once. It is keeping it consistent across hundreds of small decisions made by busy people over years. Every new volunteer who makes a graphic is a chance for the brand to drift. Every rushed Saturday before a big Sunday is a chance to grab the wrong font.
 
-The cleanest fix I know is to give the system to one person who holds it. That is what I do at Create Church Media. One designer, a flat $997 a month, every sermon series and social post and sign run through the same visual language so your Indianapolis church looks like itself everywhere.
+The cleanest fix I know is to give the system to one person who holds it. That is what I do at Create Church Media. One designer, a flat $697 a month, every sermon series and social post and sign run through the same visual language so your Indianapolis church looks like itself everywhere.
 
 If your church looks like five different churches depending on where someone finds you, [join the wait list](/contact) and I will reach out by email when a spot opens.

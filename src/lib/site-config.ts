@@ -15,8 +15,8 @@ export const siteConfig = {
   description:
     'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Indianapolis, IN.',
   pricing: {
-    monthly: 997,
-    annual: 9970,
+    monthly: 697,
+    annual: 6690,
   },
   // The wait list is the only call to action. People join the list, Emily gets
   // an email alert, and she reaches out personally when a spot opens.

@@ -48,6 +48,6 @@ It's the same compounding logic as any other form of brand-building. The work is
 
 If you can't afford a full-time designer (most churches can't), the goal is consistency. Pick a typeface stack and stick to it. Pick three to five colors and stick to them. Use the same template language across series.
 
-And, full disclosure on my own bias, consider whether a flat-fee subscription with a single designer might fit your budget. That's literally what I do at Create Church Media. One designer, $997 a month, every series and every announcement designed by someone who knows your church.
+And, full disclosure on my own bias, consider whether a flat-fee subscription with a single designer might fit your budget. That's literally what I do at Create Church Media. One designer, $697 a month, every series and every announcement designed by someone who knows your church.
 
 The cover sells the book. Worth taking it seriously.

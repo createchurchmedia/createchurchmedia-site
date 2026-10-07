@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Subscription',
   description:
-    'One flat fee. Unlimited graphic design for churches. $997 a month or $9,564 annual prepay. Same designer, same access, same turn around times.',
+    'One flat fee. Unlimited graphic design for churches. $697 a month or $6,690 annual prepay. Same designer, same access, same turn around times.',
   path: '/subscription',
 })
 
@@ -68,7 +68,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Is there a contract?',
     answer:
-      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you $2,400.',
+      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you $1,674.',
   },
   {
     question: 'What if I have a slow month?',
@@ -200,16 +200,16 @@ export default function SubscriptionPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <PriceCard
             header="Monthly"
-            price="$997"
+            price="$697"
             period="month"
             tagline="Pay month to month. Every file is yours to keep."
             source="subscription-monthly"
           />
           <PriceCard
             header="Annual prepay"
-            price="$9,564"
+            price="$6,690"
             period="year"
-            tagline="Pay for the year and save $2,400. Same designer, same access, same turn around times."
+            tagline="Pay for the year and save $1,674. Same designer, same access, same turn around times."
             source="subscription-annual"
             featured
           />
