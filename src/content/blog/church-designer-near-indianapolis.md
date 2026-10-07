@@ -8,7 +8,7 @@ tags:
   - "Indianapolis"
   - "subscription design"
 image: "/portfolio/sermon-love-your-neighbor.webp"
-tldr: "You can get a dedicated church designer near Indianapolis without paying agency rates by using a subscription instead of project-based agency work. An agency bills per project and layers on account management, while the subscription gives you one designer for a flat $997 a month with unlimited requests. For most churches in the Indianapolis area, that is a fraction of agency cost with more consistency."
+tldr: "You can get a dedicated church designer near Indianapolis without paying agency rates by using a subscription instead of project-based agency work. An agency bills per project and layers on account management, while the subscription gives you one designer for a flat $697 a month with unlimited requests. For most churches in the Indianapolis area, that is a fraction of agency cost with more consistency."
 faqs:
   - question: "Why is an agency so expensive for church design?"
     answer: "Agencies price per project and build in overhead you never see directly: account managers, project managers, and the margin to keep the lights on. A single sermon series brand from an agency can cost more than a month of subscription design. That model makes sense for a one-time corporate rebrand, but a church needs steady weekly work, and paying agency project rates for that volume gets expensive fast."
@@ -32,7 +32,7 @@ For a one-time corporate rebrand, that apparatus earns its keep. For a church th
 
 Subscription design strips the model down to the part a church actually needs: a dedicated designer. You work with me directly. No account manager between us, no project manager, no markup on a markup. You send requests, I design, you revise until it is right.
 
-It is a flat $997 a month for unlimited requests and revisions. For most churches near Indianapolis, a year of that costs a fraction of what the same volume would run through an agency, and the consistency is better because one person is holding your whole brand instead of a rotating team.
+It is a flat $697 a month for unlimited requests and revisions. For most churches near Indianapolis, a year of that costs a fraction of what the same volume would run through an agency, and the consistency is better because one person is holding your whole brand instead of a rotating team.
 
 ## Working directly is faster
 
