@@ -39,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies',
     '/resources',
     '/contact',
+    '/subscribe',
+    '/privacy',
   ]
 
   const baseEntries: MetadataRoute.Sitemap = routes.map((route) => ({
