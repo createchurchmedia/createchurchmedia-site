@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-const RETURN_URL = 'https://www.createchurchmedia.com'
+const RETURN_URL = 'https://createchurchmedia.com'
 
 /**
  * Sends a subscriber to Stripe's hosted Billing Portal, where they can

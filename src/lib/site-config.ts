@@ -2,10 +2,11 @@ export const siteConfig = {
   brand: 'Create Church Media',
   shortBrand: 'CCM',
   domain: 'createchurchmedia.com',
-  // Canonical host is www. The bare apex 308-redirects to www, so every
-  // canonical, og:url, sitemap entry, and JSON-LD url must use the www host to
-  // match the resolved address. Changing this one value propagates everywhere.
-  url: 'https://www.createchurchmedia.com',
+  // Canonical host is the bare apex. www 308-redirects to the apex (set in the
+  // Vercel domain settings), so every canonical, og:url, sitemap entry, and
+  // JSON-LD url must use the apex host to match the resolved address. Changing
+  // this one value propagates everywhere.
+  url: 'https://createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
   // Default social share card, 1200x630, lives at /og-image.jpg.
   ogImage: '/og-image.jpg',
