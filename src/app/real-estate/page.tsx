@@ -159,7 +159,7 @@ const SERVICES: ServiceGroup[] = [
   {
     label: 'Brand',
     items: [
-      'Logo and wordmark',
+      'Logo and wordmark for your personal brand',
       'Full brand kit with colors, type and usage rules',
       'Headshot treatments for signs, web and social',
       'Email signatures for you and your team',
