@@ -47,6 +47,14 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/real-estate"
+                  className="transition hover:text-neutral-950 hover:underline underline-offset-4 decoration-[var(--color-cta)]"
+                >
+                  For real estate agents
+                </Link>
+              </li>
             </ul>
           </nav>
 

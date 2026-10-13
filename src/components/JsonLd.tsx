@@ -177,6 +177,64 @@ export function ServiceJsonLd() {
   )
 }
 
+/**
+ * Service entity for the real estate agent page (/real-estate). Same shape as
+ * ServiceJsonLd so the two offers read as siblings of one provider, with an
+ * audience so search engines can tell the two subscriptions apart.
+ */
+export function RealEstateServiceJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Unlimited graphic design for real estate agents',
+    url: `${siteConfig.url}/real-estate`,
+    provider: {
+      '@type': 'Organization',
+      name: siteConfig.brand,
+      url: siteConfig.url,
+    },
+    serviceType: 'Graphic design subscription',
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Real estate agents',
+    },
+    areaServed: [{ '@type': 'Country', name: 'United States' }],
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Monthly subscription',
+        price: siteConfig.pricing.monthly,
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: siteConfig.pricing.monthly,
+          priceCurrency: 'USD',
+          unitText: 'MONTH',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Annual prepay',
+        price: siteConfig.pricing.annual,
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: siteConfig.pricing.annual,
+          priceCurrency: 'USD',
+          unitText: 'YEAR',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export function FaqJsonLd({ faqs }: { faqs: { question: string; answer: string }[] }) {
   const data = {
     '@context': 'https://schema.org',
