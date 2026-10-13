@@ -19,7 +19,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Graphic design for real estate agents',
   description:
-    'Unlimited graphic design for real estate agents at a flat $697 a month. Listing graphics, yard signs, presentations, guides and social kits from one designer.',
+    'Graphic design for real estate agents at a flat $697 a month. Listing graphics, signs, a media kit and post-closing follow-up pieces, designed and handed off ready to use.',
   path: '/real-estate',
 })
 
@@ -35,7 +35,7 @@ const SAMPLES: PortfolioCategory[] = [
     key: 'real-estate',
     title: 'Sample work',
     description:
-      'Listing collateral, signage and social kits designed for a sample agent brand.',
+      'A new construction guide, a listing carousel, a listing presentation, two yard signs and a social kit, all designed to read as one brand.',
     aspectClass: 'aspect-square',
     items: [
       {
@@ -72,30 +72,31 @@ const SAMPLES: PortfolioCategory[] = [
   },
 ]
 
+// The three pieces agents ask about first, per the 2026-10-12 planning call:
+// a media kit, follow-up after closing, and one consistent brand everywhere.
 const FEATURES = [
   {
-    title: 'We match your brand.',
+    title: 'A media kit.',
     body:
-      'We design in your colors, your fonts and your voice. Send a brand guide or send a business card and we work from there.',
+      'One link with your headshot, logo, colors and bio. When you sponsor an event, the organizer gets your brand right on the flyer, the website and the socials.',
   },
   {
-    title: 'Unlimited requests, unlimited revisions.',
+    title: 'Follow-up after closing.',
     body:
-      'Send as many projects as you need each month and as many revisions as it takes until the design is right. You get every size for every platform you use.',
+      'Six month check-ins, one year houseversary cards and seasonal notes with your branding on them, ready to send to the clients who already closed with you.',
   },
   {
-    title: 'Fast turn around times.',
+    title: 'One brand everywhere.',
     body:
-      'We ask for a one-week lead time on requests and understand when a listing goes live tomorrow. Same-day rush is available when you flag the urgency.',
+      'The same headshot, logo and colors on your signs, your socials and your listings, so the people who met you once can find you again.',
   },
 ]
 
 const PLAN_BULLETS = [
   'One designer.',
-  'Unlimited requests.',
-  'Unlimited revisions.',
-  'Same-day rush available.',
-  'Source files included.',
+  'One active project at a time.',
+  'As many projects a month as you can handle.',
+  'Design and handoff.',
 ]
 
 type ServiceGroup = { label: string; items: string[] }
@@ -134,10 +135,17 @@ const SERVICES: ServiceGroup[] = [
     ],
   },
   {
+    label: 'Signs',
+    items: [
+      'Directional arrows, where your state and city allow them',
+      'Open house signs sized for the generic wood A-frame',
+      'Listing signs in the same brand kit as the rest',
+      'Sold signs for the day the deal closes',
+    ],
+  },
+  {
     label: 'Print',
     items: [
-      'Yard signs and riders in your brand',
-      'Directional and open house signs',
       'Business cards that match the sign in the yard',
       'Door hangers for the streets you farm',
       'Postcards and mailers sized for EDDM',
@@ -148,8 +156,8 @@ const SERVICES: ServiceGroup[] = [
   {
     label: 'Social',
     items: [
-      'Monthly social kits with posts and story templates',
-      'Market report graphics for your monthly numbers',
+      'Carousel templates, fun and light or value add',
+      'Current and seasonal content templates for the month ahead',
       'Testimonial and review graphics from your clients',
       'Instagram highlight covers in your brand',
       'Short form video covers and end cards',
@@ -159,11 +167,22 @@ const SERVICES: ServiceGroup[] = [
   {
     label: 'Brand',
     items: [
+      'Media kit with your headshot, logo, colors and bio',
       'Logo and wordmark for your personal brand',
       'Full brand kit with colors, type and usage rules',
-      'Headshot treatments for signs, web and social',
+      'Matching profile photos and cover banners for every platform',
       'Email signatures for you and your team',
       'Website and listing page banners',
+    ],
+  },
+  {
+    label: 'Follow-up',
+    items: [
+      'Six month check-in cards for past clients',
+      'One year houseversary cards',
+      'Seasonal notes with your branding on them',
+      'Closing congratulations pieces',
+      'Client appreciation and event invitations',
     ],
   },
   {
@@ -172,40 +191,7 @@ const SERVICES: ServiceGroup[] = [
       'Team branding for every agent on the roster',
       'Recruiting graphics for the agents you want to hire',
       'Agent announcement posts for new hires',
-      'Client appreciation and event invitations',
-      'Closing gift tags and congratulations pieces',
     ],
-  },
-]
-
-const STEPS = [
-  {
-    number: '01',
-    title: 'Onboard',
-    body:
-      'We start with a kickoff call and learn your brand, your market and the pace your team works at.',
-  },
-  {
-    number: '02',
-    title: 'Request',
-    body:
-      'You send requests by email, one at a time or a stack for the month.',
-  },
-  {
-    number: '03',
-    title: 'Design',
-    body:
-      'We design the project and send one idea or a few options to choose from.',
-  },
-  {
-    number: '04',
-    title: 'Review',
-    body: 'You reply with changes. We revise until it is right.',
-  },
-  {
-    number: '05',
-    title: 'Deliver',
-    body: 'Final files arrive sized for every platform you use.',
   },
 ]
 
@@ -213,31 +199,26 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What does unlimited mean?',
     answer:
-      'Unlimited requests and unlimited revisions on a flat monthly fee. One designer works the queue, and we keep going until you are happy with the finished piece. Same-day rush is available when you flag the urgency.',
+      'One active project at a time, and as many projects in a month as you can handle. When one is handed off, send the next.',
   },
   {
-    question: 'Is there a contract?',
+    question: 'What is included?',
     answer:
-      'The subscription runs month to month. An annual prepay of $6,690 is available and saves $1,674.',
+      'Design and handoff. Emily designs the piece and sends you the finished files, ready to print or post. Posting, captions and account management stay with you.',
   },
   {
-    question: 'Who owns the files?',
+    question: 'Who does the work?',
+    answer: 'Emily. Every project goes to her directly.',
+  },
+  {
+    question: 'What is a media kit?',
     answer:
-      'You do. Final files, source files and brand assets are yours to keep. If we ever part ways, you keep the library.',
+      'One link or PDF with your headshot, logo, colors and a short bio. When you sponsor an event or get featured, you send the link and your brand shows up correctly on their flyer, website and socials.',
   },
   {
-    question: 'Will I work with the same designer every time?',
-    answer: 'Yes. Every project goes to Emily directly.',
-  },
-  {
-    question: 'How do I send requests?',
+    question: 'What are follow-up pieces?',
     answer:
-      'Email works for most people, with the project title in the subject line so it is easy to find later. If your team already runs on a tool like Basecamp, we are happy to work inside it.',
-  },
-  {
-    question: 'Do you build websites?',
-    answer:
-      'We handle brand and design system work and make sure your site visuals stay on brand. Full site builds go to web developers we trust and can refer you to.',
+      'Branded check-ins for the clients who already closed with you. A six month note, a one year houseversary card, a seasonal hello. You pick the moments and we design the pieces.',
   },
 ]
 
@@ -249,12 +230,12 @@ export default function RealEstatePage() {
 
       <PageIntro
         eyebrow="Real estate design subscription"
-        title="Unlimited graphic design for real estate agents."
+        title="Graphic design for real estate agents, done for you."
       >
         <p>
-          A flat $697 a month. One designer who learns your brand and designs
-          every listing graphic, yard sign, guide and post you send over. Every
-          file is yours to keep.
+          A flat $697 a month. Send Emily what you need, go back to your
+          showings, and get the finished files back ready to use. One project
+          at a time, as many as you can handle each month.
         </p>
         <div className="mt-10">
           <Button href={EMAIL_HREF} variant="solid">
@@ -283,13 +264,13 @@ export default function RealEstatePage() {
       <section aria-label="The offer">
         <SectionIntro
           eyebrow="The offer"
-          title="One designer. One flat fee. Fast turn around times."
+          title="One designer. One flat fee. Your time back."
           className="mt-24 sm:mt-32 lg:mt-40"
         >
           <p>
-            We design for real estate agents on a flat $697 a month
-            subscription. Emily becomes your remote graphic designer, on call,
-            and answers her own email.
+            The agents busy enough to need design help have the least time to
+            make it themselves. Emily designs it for you on a flat $697 a
+            month and hands off the finished files.
           </p>
         </SectionIntro>
 
@@ -328,7 +309,8 @@ export default function RealEstatePage() {
                 <span className="text-base text-neutral-300">/ month</span>
               </p>
               <p className="mt-4 text-base text-neutral-300">
-                Pay month to month. Cancel any time. Every file is yours to keep.
+                One flat fee for the design work. You send the request and get
+                the finished files back.
               </p>
               <ul role="list" className="mt-8 space-y-3 text-base">
                 {PLAN_BULLETS.map((bullet) => (
@@ -364,13 +346,12 @@ export default function RealEstatePage() {
 
               <Border className="mt-10 pt-10">
                 <h2 className="font-display text-base font-semibold text-neutral-950">
-                  Prefer to pay for the year?
+                  What is included
                 </h2>
                 <p className="mt-6 text-base text-neutral-600">
-                  The annual prepay is $
-                  {siteConfig.pricing.annual.toLocaleString()} and saves $1,674
-                  compared to paying monthly. Same designer, same access, same
-                  turn around times.
+                  Design and handoff. Emily designs the piece and sends you
+                  the finished files, ready to print or post. Posting,
+                  captions and account management stay with you.
                 </p>
               </Border>
 
@@ -398,12 +379,12 @@ export default function RealEstatePage() {
       <section aria-label="What we design">
         <SectionIntro
           eyebrow="What we design"
-          title="Everything an agent needs designed, under one subscription."
+          title="Everything an agent needs designed, one project at a time."
           className="mt-24 sm:mt-32 lg:mt-40"
         >
           <p>
-            Scan for what you need this week. The list keeps growing, so send
-            what you need and we will design it.
+            Scan for what you need this week. Send it over and go back to
+            work.
           </p>
         </SectionIntro>
 
@@ -431,54 +412,6 @@ export default function RealEstatePage() {
               ))}
             </div>
           </FadeInStagger>
-        </Container>
-      </section>
-
-      {/* How it works */}
-      <section aria-label="How it works">
-        <SectionIntro
-          eyebrow="How it works"
-          title="From request to a finished file."
-          className="mt-24 sm:mt-32 lg:mt-40"
-        >
-          <p>
-            You send what you need. We design it. You review. We revise and
-            send the completed files.
-          </p>
-        </SectionIntro>
-
-        <Container className="mt-16">
-          <FadeInStagger faster>
-            <ol
-              role="list"
-              className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5"
-            >
-              {STEPS.map((step) => (
-                <FadeIn as="li" key={step.number}>
-                  <Border className="pt-8">
-                    <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
-                      {step.number}
-                    </p>
-                    <h3 className="mt-4 font-display text-xl font-semibold tracking-tight text-neutral-950">
-                      {step.title}
-                    </h3>
-                    <p className="mt-3 text-base leading-7 text-neutral-600">
-                      {step.body}
-                    </p>
-                  </Border>
-                </FadeIn>
-              ))}
-            </ol>
-          </FadeInStagger>
-          <FadeIn className="mt-10">
-            <Link
-              href="/how-it-works"
-              className="inline-flex items-center gap-2 text-base font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
-            >
-              Read the full process
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </FadeIn>
         </Container>
       </section>
 
@@ -523,7 +456,7 @@ export default function RealEstatePage() {
                 <div className="mt-6 text-xl text-neutral-300">
                   <p>
                     Email Emily with your name, your brokerage and the first
-                    thing you need designed. She replies personally.
+                    thing you need designed.
                   </p>
                 </div>
                 <div className="mt-10">

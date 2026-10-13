@@ -186,7 +186,9 @@ export function RealEstateServiceJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Unlimited graphic design for real estate agents',
+    name: 'Graphic design for real estate agents',
+    description:
+      'Graphic design for real estate agents on a flat monthly subscription. One active project at a time, as many projects a month as the agent can handle. Design and handoff.',
     url: `${siteConfig.url}/real-estate`,
     provider: {
       '@type': 'Organization',
@@ -199,32 +201,18 @@ export function RealEstateServiceJsonLd() {
       audienceType: 'Real estate agents',
     },
     areaServed: [{ '@type': 'Country', name: 'United States' }],
-    offers: [
-      {
-        '@type': 'Offer',
-        name: 'Monthly subscription',
+    offers: {
+      '@type': 'Offer',
+      name: 'Monthly subscription',
+      price: siteConfig.pricing.monthly,
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
         price: siteConfig.pricing.monthly,
         priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: siteConfig.pricing.monthly,
-          priceCurrency: 'USD',
-          unitText: 'MONTH',
-        },
+        unitText: 'MONTH',
       },
-      {
-        '@type': 'Offer',
-        name: 'Annual prepay',
-        price: siteConfig.pricing.annual,
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: siteConfig.pricing.annual,
-          priceCurrency: 'USD',
-          unitText: 'YEAR',
-        },
-      },
-    ],
+    },
   }
 
   return (
