@@ -8,6 +8,9 @@ export const siteConfig = {
   // this one value propagates everywhere.
   url: 'https://createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
+  // Stripe's no-code customer portal login. Emails the subscriber a one-time
+  // code, so no unauthenticated lookup is needed on our side.
+  billingPortalUrl: 'https://billing.stripe.com/p/login/dRm7sL2Bt9Ij87YeV4eQM00',
   // Default social share card, 1200x630, lives at /og-image.jpg.
   ogImage: '/og-image.jpg',
   city: 'Indianapolis',
@@ -43,6 +46,7 @@ export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/how-it-works', label: 'How it works' },
   { href: '/subscription', label: 'Subscription' },
+  { href: '/subscribe', label: 'Subscribe' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/resources', label: 'Resources' },

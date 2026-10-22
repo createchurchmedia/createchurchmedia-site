@@ -15,8 +15,7 @@ export const dynamic = 'force-dynamic'
  * - STRIPE_WEBHOOK_SECRET — after adding the endpoint below in the Stripe
  *   dashboard, Stripe generates a "Signing secret" (starts with whsec_).
  *   Copy that into Vercel. Requests without a valid signature are rejected.
- * - STRIPE_SECRET_KEY — already required by /api/checkout and
- *   /api/customer-portal. Used here to look up the customer's email, since
+ * - STRIPE_SECRET_KEY — already required by /api/checkout. Used here to look up the customer's email, since
  *   the subscription event payload only carries the customer id.
  * - RESEND_API_KEY — already set for the wait list; reused here.
  *

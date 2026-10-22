@@ -126,29 +126,15 @@ export default function SubscribePage() {
                 Manage your subscription, update your card, view invoices, or
                 cancel any time.
               </p>
-              <form
-                action="/api/customer-portal"
-                method="GET"
-                className="mt-4 flex flex-col gap-3 sm:flex-row"
+              <a
+                href={siteConfig.billingPortalUrl}
+                className="mt-4 inline-flex shrink-0 items-center justify-center gap-1.5 rounded-md bg-neutral-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800"
               >
-                <label htmlFor="portal-email" className="sr-only">
-                  Email used at checkout
-                </label>
-                <input
-                  id="portal-email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="you@yourchurch.org"
-                  className="w-full rounded-md border-0 px-4 py-2.5 text-sm text-neutral-950 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-950"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-md bg-neutral-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800"
-                >
-                  Manage subscription
-                </button>
-              </form>
+                Manage subscription
+              </a>
+              <p className="mt-3 text-sm text-neutral-500">
+                Stripe emails you a one-time code to sign in.
+              </p>
             </Border>
           </FadeIn>
         </div>

@@ -5,7 +5,6 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ContactBlock } from '@/components/ContactBlock'
 import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
@@ -107,14 +106,14 @@ function PriceCard({
   price,
   period,
   tagline,
-  source,
+  checkoutHref,
   featured = false,
 }: {
   header: string
   price: string
   period: string
   tagline: string
-  source: string
+  checkoutHref: string
   featured?: boolean
 }) {
   return (
@@ -169,13 +168,16 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-auto pt-10">
-        <JoinWaitListButton
-          source={source}
-          variant={featured ? 'primary' : 'secondary'}
-          tone={featured ? 'dark' : 'light'}
-          withArrow={false}
-          className="w-full"
-        />
+        <a
+          href={checkoutHref}
+          className={
+            featured
+              ? 'block w-full rounded-md bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110'
+              : 'block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800'
+          }
+        >
+          {featured ? 'Subscribe annually' : 'Subscribe monthly'}
+        </a>
       </div>
     </FadeIn>
   )
@@ -203,14 +205,14 @@ export default function SubscriptionPage() {
             price="$697"
             period="month"
             tagline="Pay month to month. Every file is yours to keep."
-            source="subscription-monthly"
+            checkoutHref="/api/checkout"
           />
           <PriceCard
             header="Annual prepay"
             price="$6,690"
             period="year"
             tagline="Pay for the year and save $1,674. Same designer, same access, same turn around times."
-            source="subscription-annual"
+            checkoutHref="/api/checkout?plan=annual"
             featured
           />
         </div>

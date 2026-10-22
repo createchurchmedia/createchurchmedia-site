@@ -47,7 +47,7 @@ export default async function SubscribeSuccessPage({
             {sessionId ? (
               <p className="mt-6 border-t border-neutral-200 pt-6 text-base leading-7 text-neutral-600">
                 <a
-                  href={`/api/customer-portal?session_id=${encodeURIComponent(sessionId)}`}
+                  href={siteConfig.billingPortalUrl}
                   className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
                 >
                   Manage your subscription
