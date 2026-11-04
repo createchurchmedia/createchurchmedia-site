@@ -120,9 +120,9 @@ export default function HowItWorksPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Sign up." source="how-it-works">
+      <ContactBlock heading="Talk to Emily." source="how-it-works">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

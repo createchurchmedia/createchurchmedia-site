@@ -46,4 +46,4 @@ Practically, this all runs through the subscription. A Westfield church sends me
 
 It is a flat $697 per month for unlimited requests, which means a church can plan a full quarter of series without doing the math on each one. The design stops being a budget decision and becomes a normal part of how the church communicates.
 
-If you lead a church in or around Westfield and your sermon series art has been hit or miss, [sign up](/contact) and I will reach out by email to schedule an appointment.
+If you lead a church in or around Westfield and your sermon series art has been hit or miss, [reach out](/contact) and I will email you to schedule an appointment.

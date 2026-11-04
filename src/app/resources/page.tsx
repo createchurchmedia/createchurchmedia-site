@@ -99,9 +99,9 @@ export default async function ResourcesPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Sign up." source="resources-index">
+      <ContactBlock heading="Talk to Emily." source="resources-index">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

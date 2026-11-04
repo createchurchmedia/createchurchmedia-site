@@ -11,18 +11,18 @@ import { siteConfig } from '@/lib/site-config'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sign up',
+  title: 'Talk to Emily',
   description:
-    'Sign up with your church name and email, and Emily will reach out to schedule an appointment.',
+    'Share your church name and email, and Emily will reach out to schedule an appointment.',
   path: '/contact',
 })
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Sign up" title="Sign up.">
+      <PageIntro eyebrow="Contact" title="Talk to Emily.">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </PageIntro>
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
               How it works
             </h2>
             <p className="mt-6 text-base text-neutral-600">
-              After you sign up, Emily emails you personally to schedule an
+              After you reach out, Emily emails you personally to schedule an
               appointment and talk through your church, your design needs, and
               what onboarding looks like. No automated sequences, no
               sales calls you did not ask for.

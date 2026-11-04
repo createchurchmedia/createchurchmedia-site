@@ -153,11 +153,11 @@ export default async function CaseStudyPage({
       </Container>
 
       <ContactBlock
-        heading="Sign up."
+        heading="Talk to Emily."
         source={`case-study:${slug}`}
       >
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

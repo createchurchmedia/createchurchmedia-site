@@ -29,13 +29,13 @@ export const siteConfig = {
   },
   // The Stripe Price for the annual plan. Used by checkout and the term reminder.
   annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',
-  // Sign up is the main call to action. People fill out the form, Emily gets
+  // Talk to Emily is the main call to action. People fill out the form, Emily gets
   // an email alert, and she reaches out personally to schedule an appointment.
   signUpUrl: '/contact',
-  ctaLabel: 'Sign up',
+  ctaLabel: 'Talk to Emily',
   // Plain mailto fallback used if the sign-up API is ever unavailable.
   signUpMailto:
-    'mailto:emily@createchurchmedia.com?subject=Signing%20up',
+    'mailto:emily@createchurchmedia.com?subject=Talking%20with%20Emily',
   // Google Business Profile URL. Empty until Brett fills it in.
   googleBusinessUrl: '',
   // Direct "write a review" link for Emily's Google Business Profile. Empty

@@ -199,7 +199,7 @@ export function SignUpModal({
                   id={titleId}
                   className="font-display text-2xl font-semibold tracking-tight text-neutral-950"
                 >
-                  You&rsquo;re signed up.
+                  Thanks, Emily has your info.
                 </h2>
                 <p className="mt-4 text-base leading-7 text-neutral-600">
                   Emily will reach out by email to schedule an appointment. Keep an eye on
@@ -221,7 +221,7 @@ export function SignUpModal({
                   id={titleId}
                   className="font-display text-2xl font-semibold tracking-tight text-neutral-950"
                 >
-                  Sign up
+                  Talk to Emily
                 </h2>
                 <p className="mt-3 text-base leading-7 text-neutral-600">
                   Drop your info and Emily will reach out by email to schedule
@@ -335,7 +335,7 @@ export function SignUpModal({
                       disabled={status === 'submitting'}
                       className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
                     >
-                      {status === 'submitting' ? 'Signing up' : 'Sign up'}
+                      {status === 'submitting' ? 'Sending' : 'Send'}
                       <span aria-hidden="true">&rarr;</span>
                     </button>
                   </div>

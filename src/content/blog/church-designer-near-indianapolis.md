@@ -44,4 +44,4 @@ The one real tradeoff is capacity. A single dedicated designer is plenty for one
 
 I am based in the Indianapolis area and work with churches all over the metro. Being local means I understand the churches here and the community your church is reaching, the kind of context an out-of-state agency would never have. But you are not paying for a local office or local overhead. You are paying for a designer who happens to know your area.
 
-If you have been quietly assuming strong church design near Indianapolis requires an agency budget, it does not. [Sign up](/contact) and I will reach out by email to schedule an appointment.
+If you have been quietly assuming strong church design near Indianapolis requires an agency budget, it does not. [Reach out](/contact) and I will email you to schedule an appointment.

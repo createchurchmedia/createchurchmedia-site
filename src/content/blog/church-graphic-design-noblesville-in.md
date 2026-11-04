@@ -46,4 +46,4 @@ I design for churches on a flat $697 per month subscription. You send as many re
 
 That shift is the whole point. When design is a fixed line item instead of a per-project gamble, your team stops rationing it and starts using it.
 
-If you run a church in Noblesville and you are tired of the design drift, [sign up](/contact) and I will reach out by email to schedule an appointment.
+If you run a church in Noblesville and you are tired of the design drift, [reach out](/contact) and I will email you to schedule an appointment.

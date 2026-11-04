@@ -222,9 +222,9 @@ export default function PortfolioPage() {
         </Border>
       </Container>
 
-      <ContactBlock heading="Sign up." source="portfolio">
+      <ContactBlock heading="Talk to Emily." source="portfolio">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

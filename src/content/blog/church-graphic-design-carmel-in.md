@@ -46,4 +46,4 @@ For a small Carmel church getting started, I usually point to three things first
 
 Everything else, the event branding and seasonal pushes and one-off needs, folds in over time under the same flat fee.
 
-If you lead a smaller church in Carmel and you feel the design bar in this community, [sign up](/contact) and I will reach out by email to schedule an appointment.
+If you lead a smaller church in Carmel and you feel the design bar in this community, [reach out](/contact) and I will email you to schedule an appointment.

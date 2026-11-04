@@ -319,9 +319,9 @@ export default function SubscriptionPage() {
         </Border>
       </Container>
 
-      <ContactBlock heading="Sign up.">
+      <ContactBlock heading="Talk to Emily.">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

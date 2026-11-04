@@ -56,8 +56,8 @@ export function SiteFooter() {
             </h2>
 
             <p className="mt-6 max-w-xs text-sm leading-6 text-neutral-600">
-              Sign up with your church name and email, and Emily will reach out
-              to schedule an appointment.
+              Share your church name and email, and Emily will reach out to
+              schedule an appointment.
             </p>
             <div className="mt-5">
               <SignUpButton source="footer" />

@@ -50,4 +50,4 @@ The subscription takes that off their plate. Because I hold the visual system, t
 
 Put it together and the comms director gets one dependable designer instead of a coordination problem. Requests come back on time, in every format, on brand, for a flat $697 per month. That predictability is the difference between planning a week and surviving it.
 
-If you are a comms director at an Indiana church and this sounds like your Saturdays, [sign up](/contact) and I will reach out by email to schedule an appointment.
+If you are a comms director at an Indiana church and this sounds like your Saturdays, [reach out](/contact) and I will email you to schedule an appointment.

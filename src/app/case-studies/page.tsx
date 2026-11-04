@@ -90,9 +90,9 @@ export default async function CaseStudiesPage() {
         </FadeInStagger>
       </Container>
 
-      <ContactBlock heading="Sign up." source="case-studies-index">
+      <ContactBlock heading="Talk to Emily." source="case-studies-index">
         <p>
-          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+          Share your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

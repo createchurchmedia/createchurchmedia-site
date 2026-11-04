@@ -30,7 +30,7 @@ export function SignUpButton({
   tone = 'light',
   withArrow = true,
   className,
-  children = 'Sign up',
+  children = 'Talk to Emily',
 }: Props) {
   const { openSignUpModal } = useSignUp()
 
