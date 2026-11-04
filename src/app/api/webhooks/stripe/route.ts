@@ -2,7 +2,6 @@ import { createHmac, timingSafeEqual } from 'node:crypto'
 import { NextResponse } from 'next/server'
 
 import { siteConfig } from '@/lib/site-config'
-import { sendTextAlert } from '@/lib/text-alert'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -22,7 +21,6 @@ export const dynamic = 'force-dynamic'
  * - STRIPE_SECRET_KEY — already required by /api/checkout. Used here to look up the customer's email, since
  *   the subscription event payload only carries the customer id.
  * - RESEND_API_KEY — already set for the wait list; reused here.
- * - Twilio variables, optional, for the renewal text. See src/lib/text-alert.ts.
  *
  * SETUP EMILY STILL NEEDS TO DO IN STRIPE:
  * Dashboard -> Developers -> Webhooks -> Add endpoint ->
@@ -189,7 +187,6 @@ export async function POST(req: Request): Promise<NextResponse> {
       '[CCM] Upcoming renewal',
       `Upcoming renewal: ${client} renews on ${date} for ${dollars}.`,
     )
-    await sendTextAlert(`CCM: ${client} renews on ${date} for ${dollars}.`)
     return NextResponse.json({ ok: true })
   }
 

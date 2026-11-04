@@ -25,7 +25,7 @@ export const siteConfig = {
   // The signed-agreement PDFs for each plan. Linked from the terms page and checkout.
   agreements: {
     monthly: '/agreements/CCM-Monthly-Subscription-Agreement-v1.pdf',
-    annual: '/agreements/CCM-Annual-Subscription-Agreement-v6.1.pdf',
+    annual: '/agreements/CCM-Annual-Subscription-Agreement-v7.pdf',
   },
   // The Stripe Price for the annual plan. Used by checkout and the term reminder.
   annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',

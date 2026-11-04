@@ -72,7 +72,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What is not included?',
     answer:
-      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text. On the monthly plan, print, postage, stock, and font licenses are extra, paid by you.',
+      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text. Print, postage, stock, and font licenses are extra, paid by you.',
   },
   {
     question: 'Is there a contract?',
@@ -92,7 +92,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What about file ownership?',
     answer:
-      'You own the finished work. If we ever part ways, you keep everything already delivered. On the monthly plan, I may display it in my portfolio and marketing.',
+      'You own the finished work. If we ever part ways, you keep everything already delivered. I may display it in my portfolio and marketing.',
   },
   {
     question: 'Will I work with the same designer every time?',
