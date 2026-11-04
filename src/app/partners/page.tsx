@@ -28,7 +28,7 @@ const HOW_IT_WORKS = [
   {
     step: '03',
     title: 'Earn 10% every month',
-    body: 'When a church subscribes through your link, you earn 10% of their monthly subscription for as long as they stay. $697/month subscription = $69.70 to you, every month.',
+    body: 'When a church subscribes through your link, you earn 10% of their monthly subscription for as long as they stay. $697 per month subscription = $69.70 to you, every month. The annual plan does not earn commission.',
   },
 ]
 
@@ -122,13 +122,14 @@ export default function PartnersPage() {
               10% flat, every month.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-neutral-300">
-              The $697/month subscription pays you $69.70 every month the church
+              The $697 per month subscription pays you $69.70 every month the church
               stays subscribed. There&rsquo;s no cap. If you refer three churches
               that stay for a year, that&rsquo;s over $3,500.
             </p>
             <p className="mt-4 text-base leading-7 text-neutral-400">
-              Commissions are paid monthly via direct deposit. Minimum payout
-              threshold is $50.
+              Commission applies to the monthly subscription only. The annual
+              plan does not earn commission. Commissions are paid monthly via
+              direct deposit. Minimum payout threshold is $50.
             </p>
           </FadeIn>
         </Container>

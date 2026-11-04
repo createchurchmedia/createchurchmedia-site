@@ -27,8 +27,8 @@ export default function TermsPage() {
           <div className="prose-blog">
             <p>
               These are the terms for the monthly and annual subscriptions
-              from Church Create Media Group, doing business as Create Church
-              Media. If your church has signed an Annual Subscription
+              from Church Create Media Group LLC, doing business as Create
+              Church Media. If your church has signed an Annual Subscription
               Agreement, that signed agreement is the entire agreement for
               your annual term and controls over this page. If anything here
               is unclear, email Emily at{' '}
@@ -105,7 +105,7 @@ export default function TermsPage() {
 
             <h2>Monthly plan</h2>
             <p>
-              The monthly plan is ${siteConfig.pricing.monthly} a month, billed
+              The monthly plan is ${siteConfig.pricing.monthly} per month, billed
               through Stripe. Billing starts on the day you subscribe and
               renews on that same date each month until you cancel. It is
               month-to-month, with no long-term contract. You can cancel at
@@ -126,7 +126,7 @@ export default function TermsPage() {
               The annual plan is ${siteConfig.pricing.annual.toLocaleString()},
               billed as one payment. It is a one-time charge, not a recurring
               subscription. This 12-month prepay saves $1,674 compared with the
-              monthly plan.
+              monthly plan of ${siteConfig.pricing.monthly} per month.
             </p>
             <p>
               The annual plan is a fixed 12-month term. It does not renew

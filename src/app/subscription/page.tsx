@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Subscription',
   description:
-    'One flat fee. Unlimited graphic design for churches. $697 a month or $6,690 annual prepay. Same designer, same access, same turn around times.',
+    'One flat fee. Unlimited graphic design for churches. $697 per month or $6,690 annual prepay. Same designer, same access, same turn around times.',
   path: '/subscription',
 })
 

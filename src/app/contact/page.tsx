@@ -87,7 +87,7 @@ export default function ContactPage() {
                 The offer
               </h2>
               <p className="mt-6 text-base text-neutral-600">
-                Unlimited church graphic design on a flat ${siteConfig.pricing.monthly} a
+                Unlimited church graphic design on a flat ${siteConfig.pricing.monthly} per
                 month subscription. One designer, unlimited requests and
                 revisions, every file yours to keep.
               </p>

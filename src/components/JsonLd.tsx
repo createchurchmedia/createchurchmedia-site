@@ -4,7 +4,7 @@ export function OrganizationJsonLd() {
   const sameAs: string[] = []
   if (siteConfig.googleBusinessUrl) sameAs.push(siteConfig.googleBusinessUrl)
 
-  // Service-area business (no storefront), publicly based in Indianapolis and
+  // Service-area business (no storefront), publicly based in Westfield and
   // serving the surrounding metro. The city-level areaServed list drives which
   // local Map Pack queries CCM can surface for; the GeoCircle gives Google a
   // single coordinate + radius answer for "near me" queries. The Country entry
@@ -58,8 +58,8 @@ export function OrganizationJsonLd() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 39.7684,
-      longitude: -86.1581,
+      latitude: 40.0428,
+      longitude: -86.1275,
     },
     areaServed,
     serviceArea: {
