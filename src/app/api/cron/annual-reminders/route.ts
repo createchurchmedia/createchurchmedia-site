@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 
 import { siteConfig } from '@/lib/site-config'
+import { sendTextAlert } from '@/lib/text-alert'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -11,7 +12,8 @@ export const dynamic = 'force-dynamic'
  * no renewal event for it. This finds annual payments made 335 days ago instead.
  *
  * The window is one whole UTC day, so each payment matches on exactly one run.
- * Requires CRON_SECRET in Vercel, which Vercel sends as a Bearer token.
+ * Requires CRON_SECRET in Vercel, which Vercel sends as a Bearer token. Also
+ * texts Emily when the Twilio variables are set. See src/lib/text-alert.ts.
  */
 
 const DAY_SECONDS = 86_400
@@ -58,6 +60,7 @@ async function emailEmily(session: CheckoutSession, apiKey: string): Promise<boo
     }),
   })
   if (!res.ok) console.error(`Annual reminder email failed: ${res.status} (${session.id})`)
+  await sendTextAlert(`CCM: the annual plan for ${client} ends around ${formatDate(ends)}.`)
   return res.ok
 }
 
