@@ -38,7 +38,7 @@ The designers comms directors keep are the ones who deliver every format up fron
 
 A comms director plans around lead times. When a designer misses one, the whole plan collapses into a scramble, and the scramble lands on the comms director's weekend. They are not asking for impossible speed. They are asking for predictability they can build a schedule around.
 
-I ask Indiana churches for about a week of lead time, and I hold it. When something genuinely urgent comes up before a big Sunday, I offer same-day revisions, because I know what a Saturday emergency does to the person on the other end. The flat fee means there is never a rush charge for helping in a pinch.
+I ask Indiana churches for about a week of lead time, and I hold it. When something genuinely urgent comes up before a big Sunday, I do my best to turn it around same-day, though that cannot be guaranteed, because I know what a Saturday emergency does to the person on the other end. The flat fee means there is never a rush charge for helping in a pinch.
 
 ## Hold the brand so they do not have to
 

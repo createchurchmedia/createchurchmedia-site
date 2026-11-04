@@ -13,7 +13,7 @@ faqs:
   - question: "What is the design problem most Central Indiana churches actually face?"
     answer: "It is rarely talent or software. It is that design lands on one already-busy volunteer or staff member who burns out, and when they leave, the brand resets because the knowledge lived in their head. The visible symptom is inconsistent graphics, but the root cause is an unsustainable way of getting the work done. Naming that honestly is the first step to fixing it."
   - question: "How does a subscription help with volunteer burnout?"
-    answer: "It takes the recurring weekly design load off the volunteer entirely. Instead of one person racing to make slides every Saturday, the requests come to me and I turn them around under a flat monthly fee. The volunteer can go back to the parts of ministry they are actually called to, and the church stops depending on one person's bandwidth for its visual identity."
+    answer: "It takes the recurring weekly design load off the volunteer entirely. Instead of one person racing to make graphics every Saturday, the requests come to me and I turn them around under a flat monthly fee. The volunteer can go back to the parts of ministry they are actually called to, and the church stops depending on one person's bandwidth for its visual identity."
   - question: "What happens to our brand when a staff member leaves?"
     answer: "With the subscription, very little, which is the point. Because I hold your visual system rather than your departing staffer holding it in their head, turnover does not reset your brand. The fonts, colors, and templates stay consistent through staff changes. For Central Indiana churches that have lived through the post-departure brand reset, that continuity is a big part of the appeal."
 ---
@@ -22,7 +22,7 @@ There is a design problem most Central Indiana churches share, and it almost nev
 
 ## The volunteer treadmill
 
-Here is the actual problem. In most Central Indiana churches, design lands on one person. A gifted volunteer, or a staff member who can sort of do graphics and inherited it because nobody else could. That person carries the weekly load. Sermon slides every Saturday. Social posts between everything else. Event graphics whenever a ministry asks.
+Here is the actual problem. In most Central Indiana churches, design lands on one person. A gifted volunteer, or a staff member who can sort of do graphics and inherited it because nobody else could. That person carries the weekly load. Sermon graphics every Saturday. Social posts between everything else. Event graphics whenever a ministry asks.
 
 For a while it works, because that person is generous and capable. Then it does not, because nobody can sustain that pace on top of the rest of their life and their actual calling. They burn out. They scale back, or they leave. And the church is suddenly back at zero.
 
@@ -42,7 +42,7 @@ That is exactly what the subscription does. The weekly design load comes to me i
 
 ## What it costs to step off the treadmill
 
-It is a flat $697 a month for unlimited requests and revisions. One designer, holding your whole system, turning around sermon series, social, slides, signage, and events. For a Central Indiana church, that is usually less than the true cost of the burnout cycle, once you count the volunteer you lose, the recognition you reset, and the scramble every time the work changes hands.
+It is a flat $697 a month for unlimited requests and revisions. One designer, holding your whole system, turning around sermon series, social, announcement graphics, signage, and events. For a Central Indiana church, that is usually less than the true cost of the burnout cycle, once you count the volunteer you lose, the recognition you reset, and the scramble every time the work changes hands.
 
 The graphics get better as a side effect. The real win is that the church stops depending on one exhausted person to hold its visual identity together.
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
@@ -74,7 +75,8 @@ export default function SubscribePage() {
                 </p>
                 <p className="mt-4 text-base leading-7 text-neutral-300">
                   Billed as one payment. Save $1,674 compared
-                  to paying monthly.
+                  to paying monthly. A fixed 12-month term that does not renew
+                  automatically. The annual fee is not refundable.
                 </p>
 
                 <div className="mt-8">
@@ -97,7 +99,10 @@ export default function SubscribePage() {
               <div className="mt-5 rounded-2xl bg-neutral-50 p-5 ring-1 ring-inset ring-neutral-900/5">
                 <p className="text-base text-neutral-700">
                   You are subscribing directly with Emily. One designer, end
-                  to end, no account managers in between.
+                  to end, no account managers in between.{' '}
+                  <Link href="/terms" className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2">
+                    Read the full terms.
+                  </Link>
                 </p>
               </div>
             </div>
@@ -123,8 +128,8 @@ export default function SubscribePage() {
                 Already subscribed?
               </h2>
               <p className="mt-6 text-base text-neutral-600">
-                Manage your subscription, update your card, view invoices, or
-                cancel any time.
+                Manage your subscription, update your card, or view invoices.
+                Monthly plans can cancel any time.
               </p>
               <a
                 href={siteConfig.billingPortalUrl}

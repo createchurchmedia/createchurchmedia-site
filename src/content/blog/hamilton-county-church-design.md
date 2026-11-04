@@ -15,7 +15,7 @@ faqs:
   - question: "Is subscription design right for every church in Hamilton County?"
     answer: "No. Very small churches with almost no design needs do fine handling it themselves, and very large churches with a full creative team are better served in house. The model fits the broad middle, the mid-sized churches with steady weekly design work but not enough to justify a full-time hire. That middle describes a lot of Hamilton County congregations."
   - question: "How does the cost compare to hiring locally in Hamilton County?"
-    answer: "A flat $697 a month works out to far less than a part-time designer's wages over a year, with no benefits, no payroll overhead, and no management. You also avoid paying a salary during slow seasons, since the subscription can be paused. For most Hamilton County churches the subscription delivers more consistency at a lower all-in cost than a local hire."
+    answer: "A flat $697 a month works out to far less than a part-time designer's wages over a year, with no benefits, no payroll overhead, and no management. You also avoid paying a salary during slow seasons. For most Hamilton County churches the subscription delivers more consistency at a lower all-in cost than a local hire."
 ---
 
 Something has been shifting in how churches across Hamilton County handle design. Noblesville, Westfield, Fishers, Carmel, the smaller towns in between. More and more of them are moving off the freelance-and-DIY patchwork and onto a subscription model. It is worth looking at why, because the reasons say a lot about what these churches actually need.

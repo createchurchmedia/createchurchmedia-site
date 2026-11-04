@@ -28,14 +28,14 @@ const FEATURES = [
       'I match your church brand and customize every design to fit who you are. Every design file is yours to keep.',
   },
   {
-    title: 'Unlimited projects, unlimited revisions.',
+    title: 'Unlimited requests, unlimited revisions.',
     body:
-      'Send as many projects as you need completed within each month and submit as many revisions as you need until you love the finished design. Receive sizes of each design for every platform you use.',
+      'Send as many requests as you need and submit as many revisions as you need until you love the finished design. Everything runs through one shared queue with one designer. Receive sizes of each design for every platform you use.',
   },
   {
     title: 'Fast turn around times.',
     body:
-      'I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day revisions are offered when needed. You are always free to email me anytime.',
+      'Standard turnaround is one full week, and I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day rush requests are accommodated when possible, though same-day cannot be guaranteed. You are always free to email me anytime.',
   },
 ]
 

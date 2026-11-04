@@ -38,7 +38,7 @@ The fix is not to outspend anyone. It is to close the gaps. Get the everyday gra
 
 The trap most small Carmel churches fall into is treating design as a project they cannot afford, so it gets done by whoever is free, in whatever style they default to. That is how the drift starts.
 
-The subscription removes that decision. For a flat $697 a month, a small church gets one designer handling unlimited requests and revisions. Sermon series, social, slides, signage, events. The same person holding the same system every week. That is the same kind of steady, on-brand output a much larger church would hire a team to produce, sized and priced for a church that does not have a team.
+The subscription removes that decision. For a flat $697 a month, a small church gets one designer handling unlimited requests and revisions. Sermon series, social, announcement graphics, signage, events. The same person holding the same system every week. That is the same kind of steady, on-brand output a much larger church would hire a team to produce, sized and priced for a church that does not have a team.
 
 ## Start with what people see most
 

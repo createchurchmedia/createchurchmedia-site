@@ -12,7 +12,7 @@ faqs:
   - question: "How long does the average church comms director stay in the role?"
     answer: "From the conversations I have with pastors and comms folks in Indianapolis and beyond, the median tenure sits around 18 to 24 months. Some last longer. Many leave sooner for corporate marketing roles that pay more and don't require Sunday morning."
   - question: "What is the single biggest fix for comms director burnout?"
-    answer: "Take design off their plate. The volume of weekly graphics, sermon series art, and announcement slides is the part of the job that swallows the most hours and has the hardest deadlines. A flat-fee design subscription removes that load and lets the comms director go back to being a strategist."
+    answer: "Take design off their plate. The volume of weekly graphics, sermon series art, and announcement graphics is the part of the job that swallows the most hours and has the hardest deadlines. A flat-fee design subscription removes that load and lets the comms director go back to being a strategist."
   - question: "Is hiring volunteers a substitute for a designer?"
     answer: "Volunteers help for a season. They vanish in summer, they can't take ownership of the brand, and they can't be the load-bearing wall when Holy Week hits. They work alongside a designer. They can't replace one."
 ---

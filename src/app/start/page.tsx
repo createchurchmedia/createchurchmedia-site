@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -76,7 +77,9 @@ export default function StartPage() {
                 <span className="text-base text-neutral-400">/year</span>
               </p>
               <p className="mt-4 text-base text-neutral-300">
-                Billed as one payment. You save $1,674.
+                Billed as one payment. You save $1,674. A fixed 12-month term
+                that does not renew automatically. The annual fee is not
+                refundable.
               </p>
               <a
                 href="/api/checkout?plan=annual"
@@ -106,6 +109,9 @@ export default function StartPage() {
                   we can hit the ground running.
                 </p>
                 <p className="mt-3 text-sm text-neutral-500">
+                  <Link href="/terms" className="font-medium text-neutral-950 underline underline-offset-2 hover:text-neutral-600">
+                    Read the full terms.
+                  </Link>{' '}
                   Any questions?{' '}
                   <a
                     href="mailto:emily@createchurchmedia.com"

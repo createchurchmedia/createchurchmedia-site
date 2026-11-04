@@ -36,13 +36,13 @@ A phased rollout over about a month works far better. Start with the highly visi
 
 ## Phase three: sustain it, ongoing
 
-This is the phase nobody plans for, and it is the one that decides whether the rebrand was worth it. A new brand is not self-maintaining. The week after launch, the church still needs slides, social, and event graphics, and every one of those is a chance for the new brand to drift back toward the old chaos.
+This is the phase nobody plans for, and it is the one that decides whether the rebrand was worth it. A new brand is not self-maintaining. The week after launch, the church still needs announcement graphics, social, and event graphics, and every one of those is a chance for the new brand to drift back toward the old chaos.
 
 If the plan for phase three is "the volunteer will keep it consistent," the rebrand is already in trouble. That is the same overextended setup that produced the inconsistency you just paid to fix. The rebrand only holds if someone is committed to running the system week after week.
 
 ## Where the subscription fits
 
-This is exactly the phase the subscription was built to carry. After the rebrand launches, the ongoing design comes to me. Sermon series, social, slides, signage, events, all run through the new system, all held consistent. For a flat $697 a month, the brand you invested in stays the brand people actually see, month after month, instead of slowly eroding.
+This is exactly the phase the subscription was built to carry. After the rebrand launches, the ongoing design comes to me. Sermon series, social, announcement graphics, signage, events, all run through the new system, all held consistent. For a flat $697 a month, the brand you invested in stays the brand people actually see, month after month, instead of slowly eroding.
 
 For some Indianapolis-area churches I run all three phases, helping shape the new system and then sustaining it. For others, the rebrand happens elsewhere and the subscription picks up phase three. Either way, the lesson is the same. The launch is not the finish line. It is the start of the part that matters.
 

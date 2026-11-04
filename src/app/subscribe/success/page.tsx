@@ -52,7 +52,8 @@ export default async function SubscribeSuccessPage({
                 >
                   Manage your subscription
                 </a>{' '}
-                to update your card, view invoices, or cancel any time.
+                to update your card or view invoices. Monthly plans can cancel
+                any time.
               </p>
             ) : null}
           </div>

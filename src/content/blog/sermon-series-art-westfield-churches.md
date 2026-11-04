@@ -42,7 +42,7 @@ Every series I design for a Westfield church gets built inside that church's vis
 
 ## One designer, every format, flat fee
 
-Practically, this all runs through the subscription. A Westfield church sends me the series, the dates, and a sense of the tone, and I turn around art in every format the church uses. Screen graphic, social, bulletin, slides, the whole set. As many revisions as it takes until the team loves it.
+Practically, this all runs through the subscription. A Westfield church sends me the series, the dates, and a sense of the tone, and I turn around art in every format the church uses. Screen graphic, social, bulletin, the whole set. As many revisions as it takes until the team loves it.
 
 It is a flat $697 a month for unlimited requests, which means a church can plan a full quarter of series without doing the math on each one. The design stops being a budget decision and becomes a normal part of how the church communicates.
 

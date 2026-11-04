@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -21,7 +22,7 @@ const PLAN_BULLETS = [
   'One designer.',
   'Unlimited requests.',
   'Unlimited revisions.',
-  'Same-day rush available.',
+  'Same-day rush when possible.',
   'Source files included.',
 ]
 
@@ -62,12 +63,27 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What does "unlimited" actually mean?',
     answer:
-      'Unlimited requests, unlimited revisions, flat monthly pricing. There is a single shared queue with one designer. We work together until you are completely happy with the finished project. Same-day rush is available when you flag the urgency.',
+      'Unlimited requests and unlimited revisions at one flat price, inside a single shared queue with one designer. Requests are handled in the order they arrive, and flagged rush work goes first. We work together until you are completely happy with the finished project. Unlimited does not promise unlimited simultaneous projects. If the number of projects grows beyond what one designer can realistically complete, I reserve the right to limit your active projects to a reasonable amount.',
+  },
+  {
+    question: 'How fast is turnaround?',
+    answer:
+      'Standard turnaround is one full week (seven days), and I ask your team to strive to give at least one week of notice. I understand that is not always possible. Flag the urgency and I will do my best to accommodate a same-day rush, though same-day cannot be guaranteed.',
+  },
+  {
+    question: 'What is not included?',
+    answer:
+      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text.',
   },
   {
     question: 'Is there a contract?',
     answer:
-      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you $1,674.',
+      'The monthly plan is month to month, with no long-term contract. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It does not renew automatically. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+  },
+  {
+    question: 'Can I cancel or get a refund?',
+    answer:
+      'On the monthly plan you can cancel any time. Canceling stops future billing, does not refund the current billing period, and you keep access through the end of it. The annual fee is paid in full at the start of the term and is not refundable, and the annual plan cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 12-month term.',
   },
   {
     question: 'What if I have a slow month?',
@@ -77,7 +93,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What about file ownership?',
     answer:
-      'You own everything I design for you. Final files, source files, brand assets. If we ever part ways, you keep the library.',
+      'You own everything I design for you. Final files, source files, brand assets. If we ever part ways, you keep everything already delivered.',
   },
   {
     question: 'Will I work with the same designer every time?',
@@ -87,7 +103,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Do you do websites?',
     answer:
-      'Brand and design system work, yes. Full custom site builds, no. I’ll happily make sure your site visuals are on-brand, and I work with a few church-friendly web developers I can refer you to if you need a full rebuild.',
+      'Website design and coding are not part of the subscription. I’ll happily make sure your site graphics are on-brand, and I work with a few church-friendly web developers I can refer you to if you need a full rebuild.',
   },
   {
     question: 'How do I send requests?',
@@ -192,7 +208,7 @@ export default function SubscriptionPage() {
       <PageIntro eyebrow="Subscription" title="One flat fee.">
         <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
         <p className="mt-4">
-          A flat monthly subscription with same-day turnaround. One designer who answers her own messages. Revisions are part of the deal.
+          A flat subscription, monthly or annual, with a standard one-week turnaround and same-day rush when possible. One designer who answers her own messages. Revisions are part of the deal.
         </p>
       </PageIntro>
 
@@ -204,14 +220,14 @@ export default function SubscriptionPage() {
             header="Monthly"
             price="$697"
             period="month"
-            tagline="Pay month to month. Every file is yours to keep."
+            tagline="Pay month to month. Cancel any time. Every file is yours to keep."
             checkoutHref="/api/checkout"
           />
           <PriceCard
             header="Annual prepay"
             price="$6,690"
             period="year"
-            tagline="Pay for the year and save $1,674. Same designer, same access, same turn around times."
+            tagline="Pay for the year and save $1,674. A fixed 12-month term that does not renew automatically. The annual fee is not refundable."
             checkoutHref="/api/checkout?plan=annual"
             featured
           />
@@ -220,7 +236,10 @@ export default function SubscriptionPage() {
         <FadeIn className="mt-10 flex items-center justify-center gap-4">
           <EmilyAvatar size={56} />
           <p className="max-w-sm text-base text-neutral-600">
-            You&rsquo;re paying Emily directly. One designer, end to end.
+            You&rsquo;re paying Emily directly. One designer, end to end.{' '}
+            <Link href="/terms" className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2">
+              Read the full terms.
+            </Link>
           </p>
         </FadeIn>
       </Container>

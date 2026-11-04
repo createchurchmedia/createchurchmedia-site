@@ -27,7 +27,7 @@ const STEPS: Step[] = [
     number: '02',
     title: 'Request',
     body:
-      'You send requests through one email. One thing at a time, or a stack for the month. I ask for a one-week lead time, but same-day requests are offered if urgent.',
+      'You send requests by email or through a shared platform like Basecamp. One thing at a time, or a stack for the month. Standard turnaround is one full week and I ask for a one-week lead time. If something is urgent, flag it and I will do my best to turn it around same-day, though that cannot be guaranteed.',
   },
   {
     number: '03',

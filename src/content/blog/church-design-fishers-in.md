@@ -13,9 +13,9 @@ faqs:
   - question: "Why does subscription design fit Fishers churches well?"
     answer: "Most churches in Fishers have steady weekly design needs but not enough volume to justify a full-time designer, and freelance gets expensive and slow when you are quoting every job. Subscription sits in the gap. You get a dedicated designer and predictable cost without managing an employee. For a community like Fishers with a lot of active mid-sized churches, that fit is common."
   - question: "How fast is turnaround for a Fishers church on the subscription?"
-    answer: "I ask for about a week of lead time on most requests, and I offer same-day revisions when something needs to move fast. Because I am already inside your church's brand, I am not relearning your look every time, so the work comes back faster than a new freelancer could manage. The flat fee means there is never a rush charge for a last-minute Sunday need."
+    answer: "I ask for about a week of lead time on most requests, and when something needs to move fast I do my best to turn it around same-day, though that cannot be guaranteed. Because I am already inside your church's brand, I am not relearning your look every time, so the work comes back faster than a new freelancer could manage. The flat fee means there is never a rush charge for a last-minute Sunday need."
   - question: "What happens during a slow month for a Fishers church?"
-    answer: "If a month is light, you can pause the subscription, which is something you cannot do with a salaried hire. You are never paying a full-time wage during a quiet season. Most Fishers churches run steady enough that they keep it active year round, but the option to pause is there and it removes the risk of overcommitting."
+    answer: "Churches usually have slower months and busier months, and it generally balances out by the end of the year. You are never paying a full-time wage during a quiet season, which is something you cannot say about a salaried hire. Most Fishers churches run steady enough that they keep it active year round."
 ---
 
 Fishers churches tend to share a shape. A lean staff. A communications role that is really one person wearing three hats. A steady flow of design work that never quite stops but never quite justifies a full-time hire. If that describes your church, you are the exact situation subscription design was built for.
@@ -34,7 +34,7 @@ Subscription design lives in the gap between those two. One dedicated designer, 
 
 ## How the model actually runs
 
-Here is what working together looks like for a Fishers church. You send requests through email as they come up. Sermon series, announcement slides, social graphics, signage, event branding, whatever the week holds. I turn the work around, usually within a week, and you send revisions until it is right.
+Here is what working together looks like for a Fishers church. You send requests through email as they come up. Sermon series, announcement graphics, social graphics, signage, event branding, whatever the week holds. I turn the work around, usually within a week, and you send revisions until it is right.
 
 Because I stay inside your church's brand month after month, I am not guessing at your look. The second month is faster than the first, and the sixth is faster than the second. That compounding familiarity is the part freelance can never match.
 
