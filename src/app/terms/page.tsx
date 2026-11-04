@@ -124,8 +124,9 @@ export default function TermsPage() {
             <h2>Annual plan</h2>
             <p>
               The annual plan is ${siteConfig.pricing.annual.toLocaleString()},
-              billed as one payment. This 12-month prepay saves $1,674 compared
-              with the monthly plan.
+              billed as one payment. It is a one-time charge, not a recurring
+              subscription. This 12-month prepay saves $1,674 compared with the
+              monthly plan.
             </p>
             <p>
               The annual plan is a fixed 12-month term. It does not renew

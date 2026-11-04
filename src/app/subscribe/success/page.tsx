@@ -53,7 +53,7 @@ export default async function SubscribeSuccessPage({
                   Manage your subscription
                 </a>{' '}
                 to update your card or view invoices. Monthly plans can cancel
-                any time.
+                any time. The annual plan is a single payment and does not renew.
               </p>
             ) : null}
           </div>

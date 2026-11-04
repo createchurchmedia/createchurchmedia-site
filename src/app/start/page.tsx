@@ -74,18 +74,18 @@ export default function StartPage() {
                 <span className="font-display text-6xl font-semibold tracking-tight text-white">
                   $6,690
                 </span>
-                <span className="text-base text-neutral-400">/year</span>
+                <span className="text-base text-neutral-400">/12 months</span>
               </p>
               <p className="mt-4 text-base text-neutral-300">
-                Billed as one payment. You save $1,674. A fixed 12-month term
-                that does not renew automatically. The annual fee is not
+                One payment, not a subscription. You save $1,674. A fixed
+                12-month term that does not renew. The annual fee is not
                 refundable.
               </p>
               <a
                 href="/api/checkout?plan=annual"
                 className="mt-8 block w-full rounded-md bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110"
               >
-                Subscribe annually
+                Start the annual plan
               </a>
             </FadeIn>
 

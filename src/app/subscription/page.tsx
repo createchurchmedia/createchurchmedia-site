@@ -78,7 +78,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Is there a contract?',
     answer:
-      'The monthly plan is month to month, with no long-term contract. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It does not renew automatically. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+      'The monthly plan is month to month, with no long-term contract. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
   },
   {
     question: 'Can I cancel or get a refund?',
@@ -192,7 +192,7 @@ function PriceCard({
               : 'block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800'
           }
         >
-          {featured ? 'Subscribe annually' : 'Subscribe monthly'}
+          {featured ? 'Start the annual plan' : 'Subscribe monthly'}
         </a>
       </div>
     </FadeIn>
@@ -226,8 +226,8 @@ export default function SubscriptionPage() {
           <PriceCard
             header="Annual prepay"
             price="$6,690"
-            period="year"
-            tagline="Pay for the year and save $1,674. A fixed 12-month term that does not renew automatically. The annual fee is not refundable."
+            period="12 months"
+            tagline="One payment, not a subscription. Save $1,674. A fixed 12-month term that does not renew. The annual fee is not refundable."
             checkoutHref="/api/checkout?plan=annual"
             featured
           />

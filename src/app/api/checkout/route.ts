@@ -3,17 +3,18 @@ import { NextResponse } from 'next/server'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-// The recurring Prices for the CCM subscription, created in Stripe (live
-// mode). Not secrets, safe to keep in source.
+// The Stripe Prices for the two plans (live mode). Not secrets, safe to keep in
+// source. Monthly is recurring. Annual is a one-time charge for a fixed 12-month
+// term, so it can never renew.
 const PRICE_IDS = {
   monthly: 'price_1UO1JvFv2iaRvQLlMhP0Juqb', // $697/month
-  annual: 'price_1UO1M6Fv2iaRvQLluJTT1fMp', // $6,690/year, about 20% off monthly
+  annual: 'price_1UYA7TFv2iaRvQLljMroppal', // $6,690 one-time, about 20% off monthly
 } as const
 
 type Plan = keyof typeof PRICE_IDS
 
 /**
- * Starts a Stripe Checkout session for the CCM subscription and sends the
+ * Starts a Stripe Checkout session for the chosen plan and sends the
  * browser straight to Stripe's hosted checkout page. A plain
  * <a href="/api/checkout"> (or ?plan=annual) works with no client JS required.
  *
@@ -35,11 +36,17 @@ export async function GET(req: Request): Promise<NextResponse> {
   const plan: Plan = planParam === 'annual' ? 'annual' : 'monthly'
 
   const params = new URLSearchParams()
-  params.set('mode', 'subscription')
+  params.set('mode', plan === 'annual' ? 'payment' : 'subscription')
   params.set('line_items[0][price]', PRICE_IDS[plan])
   params.set('line_items[0][quantity]', '1')
   if (plan === 'monthly') {
     params.set('allow_promotion_codes', 'true')
+  } else {
+    // Payment mode skips creating a Customer unless asked. Keep one so an annual
+    // church has a record in Stripe and can sign in to the billing portal.
+    params.set('customer_creation', 'always')
+    // One-time payments only get an invoice when asked. Subscriptions always do.
+    params.set('invoice_creation[enabled]', 'true')
   }
   params.set('success_url', `${origin}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`)
   params.set('cancel_url', `${origin}/subscribe`)

@@ -71,12 +71,12 @@ export default function SubscribePage() {
                   <span className="font-display text-5xl font-semibold tracking-tight text-white">
                     ${siteConfig.pricing.annual.toLocaleString()}
                   </span>
-                  <span className="text-base text-neutral-400">/ year</span>
+                  <span className="text-base text-neutral-400">/ 12 months</span>
                 </p>
                 <p className="mt-4 text-base leading-7 text-neutral-300">
-                  Billed as one payment. Save $1,674 compared
-                  to paying monthly. A fixed 12-month term that does not renew
-                  automatically. The annual fee is not refundable.
+                  One payment, not a subscription. Save $1,674 compared to
+                  paying monthly. A fixed 12-month term that does not renew. The
+                  annual fee is not refundable.
                 </p>
 
                 <div className="mt-8">
@@ -84,7 +84,7 @@ export default function SubscribePage() {
                     href="/api/checkout?plan=annual"
                     className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
                   >
-                    <span>Subscribe annually</span>
+                    <span>Start the annual plan</span>
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
@@ -129,7 +129,7 @@ export default function SubscribePage() {
               </h2>
               <p className="mt-6 text-base text-neutral-600">
                 Manage your subscription, update your card, or view invoices.
-                Monthly plans can cancel any time.
+                Monthly plans can cancel any time. The annual plan is a single payment and does not renew.
               </p>
               <a
                 href={siteConfig.billingPortalUrl}
