@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
-import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ContactBlock } from '@/components/ContactBlock'
 import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
 import { siteConfig } from '@/lib/site-config'
@@ -232,16 +230,6 @@ export default function SubscriptionPage() {
             featured
           />
         </div>
-
-        <FadeIn className="mt-10 flex items-center justify-center gap-4">
-          <EmilyAvatar size={56} />
-          <p className="max-w-sm text-base text-neutral-600">
-            You&rsquo;re paying Emily directly. One designer, end to end.{' '}
-            <Link href="/terms" className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2">
-              Read the full terms.
-            </Link>
-          </p>
-        </FadeIn>
       </Container>
       </section>
 
