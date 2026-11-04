@@ -13,15 +13,17 @@ export const siteConfig = {
   billingPortalUrl: 'https://billing.stripe.com/p/login/dRm7sL2Bt9Ij87YeV4eQM00',
   // Default social share card, 1200x630, lives at /og-image.jpg.
   ogImage: '/og-image.jpg',
-  city: 'Indianapolis',
+  city: 'Westfield',
   state: 'IN',
   designer: 'Emily Farmer',
   description:
-    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Indianapolis, IN.',
+    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Westfield, IN.',
   pricing: {
     monthly: 697,
     annual: 6690,
   },
+  // The Stripe Price for the annual plan. Used by checkout and the term reminder.
+  annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',
   // The wait list is the only call to action. People join the list, Emily gets
   // an email alert, and she reaches out personally when a spot opens.
   waitlistUrl: '/contact',

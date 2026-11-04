@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+import { siteConfig } from '@/lib/site-config'
+
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
@@ -8,7 +10,7 @@ export const dynamic = 'force-dynamic'
 // term, so it can never renew.
 const PRICE_IDS = {
   monthly: 'price_1UO1JvFv2iaRvQLlMhP0Juqb', // $697/month
-  annual: 'price_1UYA7TFv2iaRvQLljMroppal', // $6,690 one-time, about 20% off monthly
+  annual: siteConfig.annualPriceId, // $6,690 one-time, about 20% off monthly
 } as const
 
 type Plan = keyof typeof PRICE_IDS
