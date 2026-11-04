@@ -58,7 +58,7 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary"
-            className="hidden lg:flex items-center gap-2"
+            className="hidden lg:flex ml-auto items-center gap-2"
           >
             {navItems.map((item) => {
               const active = pathname === item.href
