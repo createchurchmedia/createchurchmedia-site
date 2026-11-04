@@ -29,13 +29,13 @@ export const siteConfig = {
   },
   // The Stripe Price for the annual plan. Used by checkout and the term reminder.
   annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',
-  // The wait list is the only call to action. People join the list, Emily gets
-  // an email alert, and she reaches out personally when a spot opens.
-  waitlistUrl: '/contact',
-  ctaLabel: 'Join the wait list',
-  // Plain mailto fallback used if the wait list API is ever unavailable.
-  waitlistMailto:
-    'mailto:emily@createchurchmedia.com?subject=Joining%20the%20wait%20list',
+  // Sign up is the main call to action. People fill out the form, Emily gets
+  // an email alert, and she reaches out personally to schedule an appointment.
+  signUpUrl: '/contact',
+  ctaLabel: 'Sign up',
+  // Plain mailto fallback used if the sign-up API is ever unavailable.
+  signUpMailto:
+    'mailto:emily@createchurchmedia.com?subject=Signing%20up',
   // Google Business Profile URL. Empty until Brett fills it in.
   googleBusinessUrl: '',
   // Direct "write a review" link for Emily's Google Business Profile. Empty
@@ -52,9 +52,12 @@ export const siteConfig = {
 export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/how-it-works', label: 'How it works' },
-  { href: '/subscription', label: 'Subscription' },
-  { href: '/subscribe', label: 'Subscribe' },
+  { href: '/subscribe', label: 'Sign up' },
   { href: '/portfolio', label: 'Portfolio' },
+] as const
+
+export const footerItems = [
+  ...navItems,
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/resources', label: 'Resources' },
 ] as const

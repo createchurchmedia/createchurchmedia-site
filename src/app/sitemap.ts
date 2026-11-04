@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '/',
     '/how-it-works',
-    '/subscription',
     '/portfolio',
     '/case-studies',
     '/resources',

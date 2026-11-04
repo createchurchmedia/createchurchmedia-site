@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/cn'
-import { useWaitList } from '@/components/wait-list/WaitListProvider'
+import { useSignUp } from '@/components/sign-up/SignUpProvider'
 
 type Variant = 'primary' | 'secondary' | 'ghost'
 type Tone = 'light' | 'dark'
@@ -18,21 +18,21 @@ type Props = {
 }
 
 /**
- * The single wait-list call to action across the site: a conventional yellow
+ * The single sign-up call to action across the site: a conventional yellow
  * rectangular rounded button (not the marker swipe). Clicking it opens the
  * shared modal via context, passing `source` so the signup is attributed to
  * this exact placement. The marker swipe stays reserved for hero text links and
  * the active nav state.
  */
-export function JoinWaitListButton({
+export function SignUpButton({
   source,
   variant = 'primary',
   tone = 'light',
   withArrow = true,
   className,
-  children = 'Join the wait list',
+  children = 'Sign up',
 }: Props) {
-  const { openWaitListModal } = useWaitList()
+  const { openSignUpModal } = useSignUp()
 
   const base =
     'group inline-flex items-center justify-center gap-1.5 rounded-md px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2'
@@ -48,7 +48,7 @@ export function JoinWaitListButton({
   return (
     <button
       type="button"
-      onClick={() => openWaitListModal(source)}
+      onClick={() => openSignUpModal(source)}
       className={cn(
         base,
         variants[variant],

@@ -1,44 +1,44 @@
 'use client'
 
 import { createContext, useCallback, useContext, useState } from 'react'
-import { JoinWaitListModal } from '@/components/wait-list/JoinWaitListModal'
+import { SignUpModal } from '@/components/sign-up/SignUpModal'
 
-type WaitListContextValue = {
-  /** Open the shared wait-list modal, tagging which CTA the lead came from. */
-  openWaitListModal: (source: string) => void
+type SignUpContextValue = {
+  /** Open the shared sign-up modal, tagging which CTA the lead came from. */
+  openSignUpModal: (source: string) => void
 }
 
-const WaitListContext = createContext<WaitListContextValue | null>(null)
+const SignUpContext = createContext<SignUpContextValue | null>(null)
 
-export function useWaitList(): WaitListContextValue {
-  const ctx = useContext(WaitListContext)
+export function useSignUp(): SignUpContextValue {
+  const ctx = useContext(SignUpContext)
   if (!ctx) {
-    throw new Error('useWaitList must be used inside <WaitListProvider>')
+    throw new Error('useSignUp must be used inside <SignUpProvider>')
   }
   return ctx
 }
 
 /**
- * App-wide host for the single wait-list modal. Every `<JoinWaitListButton>`
- * calls `openWaitListModal(source)` to open it; the `source` string is carried
+ * App-wide host for the single sign-up modal. Every `<SignUpButton>`
+ * calls `openSignUpModal(source)` to open it; the `source` string is carried
  * into the submission payload so signups are attributed to the exact CTA that
  * was clicked (header, footer, a specific case study, etc.). Wrapped around the
  * whole tree in the root layout so the modal lives once and is reachable from
  * anywhere.
  */
-export function WaitListProvider({ children }: { children: React.ReactNode }) {
+export function SignUpProvider({ children }: { children: React.ReactNode }) {
   const [source, setSource] = useState<string | null>(null)
 
-  const openWaitListModal = useCallback((nextSource: string) => {
+  const openSignUpModal = useCallback((nextSource: string) => {
     setSource(nextSource)
   }, [])
 
   const close = useCallback(() => setSource(null), [])
 
   return (
-    <WaitListContext.Provider value={{ openWaitListModal }}>
+    <SignUpContext.Provider value={{ openSignUpModal }}>
       {children}
-      <JoinWaitListModal source={source} onClose={close} />
-    </WaitListContext.Provider>
+      <SignUpModal source={source} onClose={close} />
+    </SignUpContext.Provider>
   )
 }

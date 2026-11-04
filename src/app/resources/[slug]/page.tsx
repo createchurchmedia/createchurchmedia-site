@@ -201,11 +201,11 @@ export default async function ArticlePage({
       </Container>
 
       <ContactBlock
-        heading="Join the wait list."
+        heading="Sign up."
         source={`resources-article:${slug}`}
       >
         <p>
-          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

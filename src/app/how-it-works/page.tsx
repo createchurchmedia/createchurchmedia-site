@@ -5,7 +5,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StepList, type Step } from '@/components/StepList'
 import { ContactBlock } from '@/components/ContactBlock'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import { HeroMosaicBackground } from '@/components/HeroMosaic'
 import { buildMetadata } from '@/lib/seo'
 
@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
                 </p>
               </div>
               <div className="pointer-events-auto mt-10">
-                <JoinWaitListButton source="how-it-works-hero" />
+                <SignUpButton source="how-it-works-hero" />
               </div>
             </FadeIn>
           </Container>
@@ -120,9 +120,9 @@ export default function HowItWorksPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Join the wait list." source="how-it-works">
+      <ContactBlock heading="Sign up." source="how-it-works">
         <p>
-          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

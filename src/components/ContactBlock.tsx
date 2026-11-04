@@ -2,7 +2,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import { siteConfig } from '@/lib/site-config'
 
 type Props = {
@@ -24,7 +24,7 @@ export function ContactBlock({ heading, children, source = 'contact-block' }: Pr
               </h2>
               <div className="mt-6 text-xl text-neutral-300">{children}</div>
               <div className="mt-10">
-                <JoinWaitListButton source={source} tone="dark" />
+                <SignUpButton source={source} tone="dark" />
               </div>
             </div>
 

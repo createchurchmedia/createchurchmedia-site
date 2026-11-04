@@ -48,4 +48,4 @@ That middle happens to describe a lot of Hamilton County. The county is full of 
 
 Working across the county, I bring context an out-of-area designer cannot. I know the communities these churches are reaching. I understand the local calendar and the other ministries your people quietly compare you to. When I design for a church in Hamilton County, that context shows up in work that fits rather than work that could belong anywhere.
 
-If your Hamilton County church is tired of the design patchwork and wants to see whether the subscription fits, [join the wait list](/contact) and I will reach out by email when a spot opens.
+If your Hamilton County church is tired of the design patchwork and wants to see whether the subscription fits, [sign up](/contact) and I will reach out by email to schedule an appointment.

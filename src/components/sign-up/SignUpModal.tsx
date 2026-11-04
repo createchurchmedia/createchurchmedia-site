@@ -18,8 +18,8 @@ function XIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 /**
- * Shared wait-list modal. Rendered once by `WaitListProvider`; it opens when a
- * `source` is set (by any `JoinWaitListButton`) and closes on submit-success,
+ * Shared sign-up modal. Rendered once by `SignUpProvider`; it opens when a
+ * `source` is set (by any `SignUpButton`) and closes on submit-success,
  * the X button, Escape, or a click on the backdrop.
  *
  * Built on plain React + framer-motion (Headless UI is not a dependency here).
@@ -27,7 +27,7 @@ function XIcon(props: React.SVGProps<SVGSVGElement>) {
  * trap, focus moved into the dialog on open, focus restored to the triggering
  * button on close, body scroll lock, and a polite live region for errors.
  */
-export function JoinWaitListModal({
+export function SignUpModal({
   source,
   onClose,
 }: {
@@ -142,7 +142,7 @@ export function JoinWaitListModal({
     setStatus('submitting')
 
     try {
-      const res = await fetch('/api/wait-list', {
+      const res = await fetch('/api/sign-up', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -199,10 +199,10 @@ export function JoinWaitListModal({
                   id={titleId}
                   className="font-display text-2xl font-semibold tracking-tight text-neutral-950"
                 >
-                  You&rsquo;re on the list.
+                  You&rsquo;re signed up.
                 </h2>
                 <p className="mt-4 text-base leading-7 text-neutral-600">
-                  Emily will reach out by email when a spot opens. Keep an eye on
+                  Emily will reach out by email to schedule an appointment. Keep an eye on
                   your inbox.
                 </p>
                 <div className="mt-8">
@@ -221,12 +221,11 @@ export function JoinWaitListModal({
                   id={titleId}
                   className="font-display text-2xl font-semibold tracking-tight text-neutral-950"
                 >
-                  Join the wait list
+                  Sign up
                 </h2>
                 <p className="mt-3 text-base leading-7 text-neutral-600">
-                  Emily takes on a small number of new churches each quarter.
-                  Drop your info and she&rsquo;ll reach out personally by email
-                  when a spot opens.
+                  Drop your info and Emily will reach out by email to schedule
+                  an appointment.
                 </p>
 
                 <form onSubmit={onSubmit} noValidate className="mt-6">
@@ -336,7 +335,7 @@ export function JoinWaitListModal({
                       disabled={status === 'submitting'}
                       className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
                     >
-                      {status === 'submitting' ? 'Saving' : 'Save my spot'}
+                      {status === 'submitting' ? 'Signing up' : 'Sign up'}
                       <span aria-hidden="true">&rarr;</span>
                     </button>
                   </div>

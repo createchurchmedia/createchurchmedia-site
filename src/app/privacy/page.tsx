@@ -36,7 +36,7 @@ export default function PrivacyPage() {
 
             <h2>What we collect</h2>
             <p>
-              When you join the wait list, reach out through the contact
+              When you sign up, reach out through the contact
               form, or subscribe, we collect the information you give us
               directly:
             </p>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             <h2>How we use it</h2>
             <p>We use your information to:</p>
             <ul>
-              <li>Respond to your wait list signup or contact request</li>
+              <li>Respond to your sign-up or contact request</li>
               <li>
                 Set up and manage your subscription, including billing and
                 invoicing through Stripe
@@ -100,8 +100,8 @@ export default function PrivacyPage() {
             <p>
               If you subscribe, we use your email to communicate about your
               subscription: onboarding, design requests, billing receipts,
-              and updates. If you join the wait list, we use your email to
-              follow up about a spot opening. You can ask to be removed from
+              and updates. If you sign up, we use your email to follow up and
+              schedule an appointment. You can ask to be removed from
               any of this at any time by emailing Emily directly.
             </p>
 

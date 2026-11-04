@@ -7,7 +7,7 @@ import { cn } from '@/lib/cn'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { MarkerSwipe } from '@/components/MarkerSwipe'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -95,7 +95,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <JoinWaitListButton
+            <SignUpButton
               source="header"
               withArrow={false}
               className="hidden sm:inline-flex"
@@ -155,7 +155,7 @@ export function SiteHeader() {
               )
             })}
             <li className="mt-3">
-              <JoinWaitListButton
+              <SignUpButton
                 source="header"
                 withArrow={false}
                 className="w-full"

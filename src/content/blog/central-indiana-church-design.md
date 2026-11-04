@@ -46,4 +46,4 @@ It is a flat $697 per month for unlimited requests and revisions. One designer, 
 
 The graphics get better as a side effect. The real win is that the church stops depending on one exhausted person to hold its visual identity together.
 
-If this describes your church, and I suspect it might, [join the wait list](/contact) and I will reach out by email when a spot opens.
+If this describes your church, and I suspect it might, [sign up](/contact) and I will reach out by email to schedule an appointment.

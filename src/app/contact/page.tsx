@@ -5,25 +5,24 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { PageIntro } from '@/components/PageIntro'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import { EmilyPortrait } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Join the wait list',
+  title: 'Sign up',
   description:
-    'Emily takes on a small number of new churches each quarter. Join the Create Church Media wait list and she will reach out by email when a spot opens.',
+    'Sign up with your church name and email, and Emily will reach out to schedule an appointment.',
   path: '/contact',
 })
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Wait list" title="Join the wait list.">
+      <PageIntro eyebrow="Sign up" title="Sign up.">
         <p>
-          Emily takes on a small number of new churches each quarter. Drop your
-          church name and email here, and Emily will reach out when a spot opens.
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </PageIntro>
 
@@ -32,15 +31,15 @@ export default function ContactPage() {
           <FadeIn>
             <div className="rounded-3xl bg-neutral-50 p-8 ring-1 ring-inset ring-neutral-900/5">
               <h2 className="font-display text-2xl font-semibold tracking-tight text-neutral-950">
-                Save your spot
+                Get started
               </h2>
               <p className="mt-4 text-base leading-7 text-neutral-600">
                 Tell Emily who you are and where to reach you. It takes about
-                thirty seconds, and she follows up personally by email when a
-                spot opens.
+                thirty seconds, and she follows up personally by email to
+                schedule an appointment.
               </p>
               <div className="mt-8">
-                <JoinWaitListButton source="contact-page" />
+                <SignUpButton source="contact-page" />
               </div>
             </div>
           </FadeIn>
@@ -51,7 +50,7 @@ export default function ContactPage() {
               <div className="mt-5 rounded-2xl bg-neutral-50 p-5 ring-1 ring-inset ring-neutral-900/5">
                 <p className="text-base text-neutral-700">
                   This is who reads every signup. Emily will reach out personally
-                  by email when a spot opens.
+                  by email to schedule an appointment.
                 </p>
               </div>
             </div>
@@ -60,9 +59,9 @@ export default function ContactPage() {
               How it works
             </h2>
             <p className="mt-6 text-base text-neutral-600">
-              Spots open as Emily&rsquo;s schedule allows. When one does, she
-              emails you personally to talk through your church, your design
-              needs, and what onboarding looks like. No automated sequences, no
+              After you sign up, Emily emails you personally to schedule an
+              appointment and talk through your church, your design needs, and
+              what onboarding looks like. No automated sequences, no
               sales calls you did not ask for.
             </p>
 

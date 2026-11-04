@@ -3,8 +3,8 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
-import { navItems, siteConfig } from '@/lib/site-config'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
+import { footerItems, siteConfig } from '@/lib/site-config'
 
 function StarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -37,7 +37,7 @@ export function SiteFooter() {
               Site
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
-              {navItems.map((item) => (
+              {footerItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -56,11 +56,11 @@ export function SiteFooter() {
             </h2>
 
             <p className="mt-6 max-w-xs text-sm leading-6 text-neutral-600">
-              Emily takes on a small number of new churches each quarter. Drop
-              your info and she will reach out by email when a spot opens.
+              Sign up with your church name and email, and Emily will reach out
+              to schedule an appointment.
             </p>
             <div className="mt-5">
-              <JoinWaitListButton source="footer" />
+              <SignUpButton source="footer" />
             </div>
 
             <ul className="mt-8 space-y-3 text-sm text-neutral-700">

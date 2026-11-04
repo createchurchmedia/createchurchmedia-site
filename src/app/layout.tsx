@@ -7,7 +7,7 @@ import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
 import { OrganizationJsonLd } from '@/components/JsonLd'
 import { SmoothScroll } from '@/components/SmoothScroll'
-import { WaitListProvider } from '@/components/wait-list/WaitListProvider'
+import { SignUpProvider } from '@/components/sign-up/SignUpProvider'
 import { siteConfig } from '@/lib/site-config'
 
 const monaSans = localFont({
@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <OrganizationJsonLd />
-        <WaitListProvider>
+        <SignUpProvider>
           <SmoothScroll>
             <SiteHeader />
             <main id="main" className="flex-auto pt-28 sm:pt-32">
@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </main>
             <SiteFooter />
           </SmoothScroll>
-        </WaitListProvider>
+        </SignUpProvider>
       </body>
     </html>
   )

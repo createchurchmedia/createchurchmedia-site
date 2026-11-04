@@ -2,149 +2,328 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
+import { ContactBlock } from '@/components/ContactBlock'
+import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
 import { siteConfig } from '@/lib/site-config'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Subscribe',
+  title: 'Sign up',
   description:
-    'Start your Create Church Media subscription. Unlimited graphic design for churches, monthly or annual.',
+    'One flat fee. Unlimited graphic design for churches. $697 per month or $6,690 annual prepay. Same designer, same access, same turnaround.',
   path: '/subscribe',
 })
 
-// Standalone checkout entry point. Not linked from primary nav: the wait
-// list stays the public call to action (see site-config.ts). This page is
-// for churches Emily has already talked to and is ready to bill directly,
-// or for anyone she sends the link to once a spot is open.
-export default function SubscribePage() {
+const PLAN_BULLETS = [
+  'One designer.',
+  'Unlimited requests.',
+  'Unlimited revisions.',
+  'Seven-day turnaround. Same-day depends on availability.',
+]
+
+const CATEGORIES = [
+  {
+    title: 'Sermon series',
+    body:
+      'Sermon series packages, all sizes included, custom built around your message and your church brand.',
+  },
+  {
+    title: 'Announcements',
+    body:
+      'Weekly screen graphics for everything happening at your church. Events, baptisms, conferences, you name it. All sizes offered for every platform.',
+  },
+  {
+    title: 'Logos and branding',
+    body:
+      'Church logos, color palettes, sub-brands for Youth, Kids, Women, Men, Missions, and more. Full brand identity built to last.',
+  },
+  {
+    title: 'Social media',
+    body:
+      'Social media graphics and story templates. On-brand across every platform.',
+  },
+  {
+    title: 'Youth and Kids',
+    body:
+      'Bright, on-brand graphics for your kids and youth ministries. Camp shirts, summer series, parent handouts, hallway signage.',
+  },
+  {
+    title: 'Signage, mailers and print',
+    body:
+      'Lobby signs, exterior banners, large-format prints, business cards. Print-ready files formatted for your printer.',
+  },
+]
+
+const FAQS: { question: string; answer: string }[] = [
+  {
+    question: 'What does "unlimited" actually mean?',
+    answer:
+      'Unlimited requests and unlimited revisions at one flat price, inside a single shared queue with one designer. Requests are handled in the order they arrive, and flagged rush work goes first. You can request as many revisions as you need on each project. Unlimited does not promise unlimited simultaneous projects. If the number of projects grows beyond what one designer can realistically complete, I reserve the right to limit your active projects to a reasonable amount.',
+  },
+  {
+    question: 'How fast is turnaround?',
+    answer:
+      'Standard turnaround is seven days, and I ask your team to strive to give at least one week of notice. I understand that is not always possible. Flag the urgency if something is a rush. Same-day turnaround is possible depending on my availability, but it is not guaranteed.',
+  },
+  {
+    question: 'What is not included?',
+    answer:
+      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text. Print, postage, stock, and font licenses are extra, paid by you.',
+  },
+  {
+    question: 'Is there a contract?',
+    answer:
+      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+  },
+  {
+    question: 'Can I cancel or get a refund?',
+    answer:
+      'On the monthly plan, either of us can end the subscription by email notice, and you also cancel through the billing portal. It ends at the end of the month already paid. That month is not refundable, and you keep access through its last day. The annual fee is paid in full at the start of the term and is not refundable, and the annual plan cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 12-month term.',
+  },
+  {
+    question: 'What if I have a slow month?',
+    answer:
+      'Usually churches have slower months and busier months, around holidays or big events. I have found that it generally ends up balancing out by the end of the year.',
+  },
+  {
+    question: 'What about file ownership?',
+    answer:
+      'You own the finished work. If we ever part ways, you keep everything already delivered. I may display it in my portfolio and marketing.',
+  },
+  {
+    question: 'Will I work with the same designer every time?',
+    answer:
+      'Yes. Every project comes to Emily directly. Same designer, same access, same turnaround every time.',
+  },
+  {
+    question: 'Do you do websites?',
+    answer:
+      'Website design and coding are not part of the subscription. I’ll happily make sure your site graphics are on-brand, and I work with a few church-friendly web developers I can refer you to if you need a full rebuild.',
+  },
+  {
+    question: 'How do I send requests?',
+    answer:
+      'However works for your team. Some churches already have platforms in place like Basecamp, and if so, I am happy to jump on your team threads. Most churches just email me, putting the title of the project in the Email Subject, making it easy to go back and find projects conversations. I will match your rhythm and flow.',
+  },
+  {
+    question: 'Can anyone on our staff request a project from Emily, or does she prefer one point-person to communicate through?',
+    answer:
+      'I have worked both ways depending on the preference of the church. I am happy to communicate with all your department heads on their individual design needs, or filter through one point-person if that is easier for your staff.',
+  },
+]
+
+function PriceCard({
+  header,
+  price,
+  period,
+  tagline,
+  checkoutHref,
+  featured = false,
+}: {
+  header: string
+  price: string
+  period: string
+  tagline: string
+  checkoutHref: string
+  featured?: boolean
+}) {
+  return (
+    <FadeIn
+      className={
+        featured
+          ? 'relative flex flex-col rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900'
+          : 'relative flex flex-col rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
+      }
+    >
+      {featured && (
+        <div
+          aria-label="Save 20%"
+          className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
+        >
+          <span className="text-center text-xs font-bold leading-tight text-neutral-950">
+            Save
+            <br />
+            20%
+          </span>
+        </div>
+      )}
+      <p
+        className={
+          featured
+            ? 'font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]'
+            : 'font-display text-sm font-semibold uppercase tracking-wider text-neutral-500'
+        }
+      >
+        {header}
+      </p>
+      <p className="mt-6 flex items-baseline gap-2">
+        <span className="font-display text-5xl font-semibold tracking-tight">
+          {price}
+        </span>
+        <span className={featured ? 'text-base text-neutral-300' : 'text-base text-neutral-500'}>
+          / {period}
+        </span>
+      </p>
+      <p className={featured ? 'mt-4 text-base text-neutral-300' : 'mt-4 text-base text-neutral-600'}>
+        {tagline}
+      </p>
+      <ul role="list" className="mt-8 space-y-3 text-base">
+        {PLAN_BULLETS.map((bullet) => (
+          <li key={bullet} className="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              className="mt-1 inline-block size-2 rounded-full bg-[var(--color-cta)]"
+            />
+            <span>{bullet}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-auto pt-10">
+        <a
+          href={checkoutHref}
+          className={
+            featured
+              ? 'block w-full rounded-md bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110'
+              : 'block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800'
+          }
+        >
+          {featured ? 'Start the annual plan' : 'Subscribe monthly'}
+        </a>
+      </div>
+    </FadeIn>
+  )
+}
+
+export default function SubscriptionPage() {
   return (
     <>
-      <PageIntro eyebrow="Subscribe" title="Start your subscription.">
-        <p>
-          Monthly or annual, one flat fee. Unlimited graphic design requests
-          and revisions, same designer every time.
+      <ServiceJsonLd />
+      <FaqJsonLd faqs={FAQS} />
+
+      <PageIntro eyebrow="One flat fee" title="Sign up.">
+        <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
+        <p className="mt-4">
+          A flat subscription, monthly or annual, with a standard seven-day turnaround. Same-day is possible depending on my availability, but not guaranteed. One designer who answers her own messages. Revisions are part of the deal.
         </p>
       </PageIntro>
 
-      <Container className="mt-16 sm:mt-20 lg:mt-24">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <div className="flex flex-col gap-6">
-            <FadeIn>
-              <div className="rounded-3xl bg-neutral-50 p-8 ring-1 ring-inset ring-neutral-900/5">
-                <p className="font-display text-sm font-semibold uppercase tracking-wider text-neutral-500">
-                  Monthly
-                </p>
-                <p className="mt-6 flex items-baseline gap-2">
-                  <span className="font-display text-5xl font-semibold tracking-tight text-neutral-950">
-                    ${siteConfig.pricing.monthly}
-                  </span>
-                  <span className="text-base text-neutral-500">/ month</span>
-                </p>
-                <p className="mt-4 text-base leading-7 text-neutral-600">
-                  Billed monthly through Stripe. Month to month. To end it, give
-                  email notice and cancel in the billing portal, effective at
-                  the end of the month already paid. The finished work is yours.
-                </p>
-
-                <div className="mt-8">
-                  <a
-                    href="/api/checkout"
-                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <span>Subscribe monthly</span>
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-
-              </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="rounded-3xl bg-neutral-950 p-8 text-white ring-1 ring-inset ring-neutral-900">
-                <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
-                  Annual, save 20%
-                </p>
-                <p className="mt-6 flex items-baseline gap-2">
-                  <span className="font-display text-5xl font-semibold tracking-tight text-white">
-                    ${siteConfig.pricing.annual.toLocaleString()}
-                  </span>
-                  <span className="text-base text-neutral-400">/ 12 months</span>
-                </p>
-                <p className="mt-4 text-base leading-7 text-neutral-300">
-                  One payment, not a subscription. Save $1,674 compared to
-                  paying monthly. A fixed 12-month term that does not renew. The
-                  annual fee is not refundable.
-                </p>
-
-                <div className="mt-8">
-                  <a
-                    href="/api/checkout?plan=annual"
-                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
-                  >
-                    <span>Start the annual plan</span>
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-
-              </div>
-            </FadeIn>
-          </div>
-
-          <FadeIn>
-            <div className="mb-10 max-w-md">
-              <EmilyAvatar size={72} />
-              <div className="mt-5 rounded-2xl bg-neutral-50 p-5 ring-1 ring-inset ring-neutral-900/5">
-                <p className="text-base text-neutral-700">
-                  You are subscribing directly with Emily. One designer, end
-                  to end, no account managers in between.{' '}
-                  <Link href="/terms" className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2">
-                    Read the full terms.
-                  </Link>
-                </p>
-              </div>
-            </div>
-
-            <Border className="mt-10 pt-10">
-              <h2 className="font-display text-base font-semibold text-neutral-950">
-                Prefer to talk first?
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
-                Reach Emily directly at{' '}
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
-                >
-                  {siteConfig.email}
-                </a>
-                .
-              </p>
-            </Border>
-
-            <Border className="mt-10 pt-10">
-              <h2 className="font-display text-base font-semibold text-neutral-950">
-                Already subscribed?
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
-                Manage your subscription, update your card, or view invoices.
-                Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
-              </p>
-              <a
-                href={siteConfig.billingPortalUrl}
-                className="mt-4 inline-flex shrink-0 items-center justify-center gap-1.5 rounded-md bg-neutral-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800"
-              >
-                Manage subscription
-              </a>
-              <p className="mt-3 text-sm text-neutral-500">
-                Stripe emails you a one-time code to sign in.
-              </p>
-            </Border>
-          </FadeIn>
+      {/* Pricing cards */}
+      <section aria-label="Subscription pricing">
+      <Container className="mt-16 sm:mt-20">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <PriceCard
+            header="Monthly"
+            price="$697"
+            period="month"
+            tagline="Pay month to month. To end it, give email notice and cancel in the billing portal, effective at the end of the month already paid."
+            checkoutHref="/api/checkout"
+          />
+          <PriceCard
+            header="Annual prepay"
+            price="$6,690"
+            period="12 months"
+            tagline="One payment, not a subscription. Save $1,674. A fixed 12-month term that does not renew. The annual fee is not refundable."
+            checkoutHref="/api/checkout?plan=annual"
+            featured
+          />
         </div>
+
+        <FadeIn className="mt-10 flex items-center justify-center gap-4">
+          <EmilyAvatar size={56} />
+          <p className="max-w-sm text-base text-neutral-600">
+            You&rsquo;re paying Emily directly. One designer, end to end.{' '}
+            <Link href="/terms" className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2">
+              Read the full terms.
+            </Link>
+          </p>
+        </FadeIn>
       </Container>
+      </section>
+
+      {/* Categories */}
+      <section aria-label="What's included">
+      <SectionIntro
+        eyebrow="Categories"
+        title="Many categories, all under one subscription."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      />
+      <Container className="mt-16">
+        <FadeInStagger faster>
+          <ul role="list" className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+            {CATEGORIES.map((cat) => (
+              <FadeIn as="li" key={cat.title}>
+                <Border className="pt-6">
+                  <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-neutral-950">
+                    {cat.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-neutral-600">{cat.body}</p>
+                </Border>
+              </FadeIn>
+            ))}
+          </ul>
+        </FadeInStagger>
+      </Container>
+      </section>
+
+      {/* FAQ */}
+      <section aria-label="Frequently asked questions">
+      <SectionIntro
+        eyebrow="FAQ"
+        title="The questions I hear most."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      />
+      <Container className="mt-16">
+        <FadeIn>
+          <dl className="divide-y divide-neutral-200">
+            {FAQS.map((faq) => (
+              <div
+                key={faq.question}
+                className="grid grid-cols-1 gap-6 py-8 lg:grid-cols-12"
+              >
+                <dt className="lg:col-span-5 font-display text-lg font-semibold tracking-tight text-neutral-950">
+                  {faq.question}
+                </dt>
+                <dd className="lg:col-span-7 text-base leading-7 text-neutral-700">
+                  {faq.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </FadeIn>
+      </Container>
+      </section>
+
+      <Container className="mt-24 sm:mt-32">
+        <Border className="pt-10">
+          <h2 className="font-display text-base font-semibold text-neutral-950">
+            Already subscribed?
+          </h2>
+          <p className="mt-6 text-base text-neutral-600">
+            Manage your subscription, update your card, or view invoices.
+            Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
+          </p>
+          <a
+            href={siteConfig.billingPortalUrl}
+            className="mt-4 inline-flex shrink-0 items-center justify-center gap-1.5 rounded-md bg-neutral-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800"
+          >
+            Manage subscription
+          </a>
+          <p className="mt-3 text-sm text-neutral-500">
+            Stripe emails you a one-time code to sign in.
+          </p>
+        </Border>
+      </Container>
+
+      <ContactBlock heading="Sign up.">
+        <p>
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
+        </p>
+      </ContactBlock>
     </>
   )
 }

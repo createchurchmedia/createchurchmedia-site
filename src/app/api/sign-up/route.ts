@@ -23,7 +23,7 @@ function clean(value: unknown, max = 2000): string {
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 
 /**
- * Wait-list intake for the shared modal.
+ * Sign-up intake for the shared modal.
  *
  * Primary path: emails Emily via Resend (RESEND_API_KEY, WAITLIST_TO,
  * WAITLIST_FROM), matching the documented behavior in site-config.ts
@@ -105,9 +105,9 @@ export async function POST(req: Request): Promise<NextResponse> {
   const from =
     process.env.WAITLIST_FROM || `Create Church Media <noreply@${siteConfig.domain}>`
   const who = [firstName, lastName].filter(Boolean).join(' ') || email
-  const subject = `[CCM wait list] New signup: ${who}${source ? ` (${source})` : ''}`
+  const subject = `[CCM sign up] New signup: ${who}${source ? ` (${source})` : ''}`
   const text = [
-    'New wait list signup',
+    'New sign up',
     '',
     `Name: ${who}`,
     `Email: ${email}`,

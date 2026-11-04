@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { HeroMosaic, HeroMosaicBackground } from '@/components/HeroMosaic'
@@ -75,7 +75,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-6">
-              <JoinWaitListButton source="home-hero" />
+              <SignUpButton source="home-hero" />
               <Button
                 href="/portfolio"
                 variant="ghost"
@@ -172,9 +172,9 @@ export default function HomePage() {
       </Container>
       </section>
 
-      <ContactBlock heading="Join the wait list.">
+      <ContactBlock heading="Sign up.">
         <p>
-          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>

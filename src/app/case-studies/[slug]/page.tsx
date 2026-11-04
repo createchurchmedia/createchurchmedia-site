@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { ContactBlock } from '@/components/ContactBlock'
-import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
+import { SignUpButton } from '@/components/sign-up/SignUpButton'
 import {
   getAllCaseStudySlugs,
   getCaseStudyBySlug,
@@ -103,7 +103,7 @@ export default async function CaseStudyPage({
           </dl>
           <ArticleByline className="mt-8" trailing={<> in {siteConfig.city}, {siteConfig.state}</>} />
           <div className="mt-8">
-            <JoinWaitListButton source={`case-study:${slug}`} />
+            <SignUpButton source={`case-study:${slug}`} />
           </div>
         </FadeIn>
       </Container>
@@ -153,11 +153,11 @@ export default async function CaseStudyPage({
       </Container>
 
       <ContactBlock
-        heading="Join the wait list."
+        heading="Sign up."
         source={`case-study:${slug}`}
       >
         <p>
-          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
+          Sign up with your church name and email, and Emily will reach out to schedule an appointment.
         </p>
       </ContactBlock>
     </>
