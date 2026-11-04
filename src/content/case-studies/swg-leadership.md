@@ -31,6 +31,6 @@ The work iterated through mission and vision pages, a strategic pillars layout, 
 
 In parallel, the SWG proposal document and the SWG capabilities booklet were built as sales-facing pieces. Both had to read polished and trustworthy. The capabilities booklet went through a proper editorial pass with client logos, four-pillar examples, screenshots, and corrections incorporated. By midsummer the HMH Leadership Brand and Playbook was also receiving revision rounds as new content arrived.
 
-The Illustrator files for the coaching and leadership development pieces were handed over fully layered and labeled so the team could work from clean, organized source. That kind of request is a good sign. It means the work is living inside the client's broader system and getting reused across their leadership programs.
+The finished files for the coaching and leadership development pieces were handed over organized and labeled so the team could reuse them. That kind of request is a good sign. It means the work is living inside the client's broader system and getting reused across their leadership programs.
 
 SWG and I work hourly, which suits the project-specific nature of these deliverables. Across the HMH Leadership playbook, the SWG proposal document, and the SWG capabilities booklet, this is a complete body of corporate design work that holds up against any agency comparison.

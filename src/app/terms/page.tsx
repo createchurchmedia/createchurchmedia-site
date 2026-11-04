@@ -158,8 +158,8 @@ export default function TermsPage() {
               Unlimited graphic design for your church: sermon series,
               announcement graphics, social media, logos and branding, youth and
               kids ministry materials, and signage, mailers, and print. You get
-              unlimited requests, unlimited revisions, and source files with
-              every project. Every request goes to Emily directly, so you work
+              unlimited requests and unlimited revisions. Every request goes to
+              Emily directly, so you work
               with the same designer every time.
             </p>
             <p>
@@ -263,9 +263,8 @@ export default function TermsPage() {
 
             <h3>File ownership</h3>
             <p>
-              Everything designed for you belongs to you: final files, source
-              files, and brand assets. If we ever part ways, you keep everything
-              already delivered.
+              You own the finished work. If we ever part ways, you keep
+              everything already delivered.
             </p>
 
             <h3>Fair use</h3>

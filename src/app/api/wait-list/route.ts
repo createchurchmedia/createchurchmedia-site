@@ -10,7 +10,6 @@ type Payload = {
   lastName?: string
   email?: string
   churchDomain?: string
-  referralCode?: string
   // Which CTA the signup came from (header, footer, case-study:<slug>, etc).
   source?: string
   // Honeypot. Real users never fill this.
@@ -61,7 +60,6 @@ export async function POST(req: Request): Promise<NextResponse> {
   const lastName = clean(body.lastName, 80)
   const email = clean(body.email, 200)
   const churchDomain = clean(body.churchDomain, 200)
-  const referralCode = clean(body.referralCode, 80)
   const source = clean(body.source, 120) || 'unknown'
   const timestamp = new Date().toISOString()
 
@@ -78,7 +76,8 @@ export async function POST(req: Request): Promise<NextResponse> {
     lastName,
     email,
     churchDomain,
-    referralCode,
+    // Blank so the Google Sheet's existing columns stay lined up.
+    referralCode: '',
     source,
     timestamp,
   }
@@ -113,7 +112,6 @@ export async function POST(req: Request): Promise<NextResponse> {
     `Name: ${who}`,
     `Email: ${email}`,
     `Church domain: ${churchDomain}`,
-    `Referral code: ${referralCode || '(none)'}`,
     `Source: ${source}`,
   ].join('\n')
 

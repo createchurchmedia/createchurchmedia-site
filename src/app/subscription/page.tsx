@@ -92,7 +92,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What about file ownership?',
     answer:
-      'On the monthly plan, you own the finished work, and I may display it in my portfolio and marketing. On the annual plan, everything I design for you belongs to you: final files, source files, and brand assets. If we ever part ways, you keep everything already delivered.',
+      'You own the finished work. If we ever part ways, you keep everything already delivered. On the monthly plan, I may display it in my portfolio and marketing.',
   },
   {
     question: 'Will I work with the same designer every time?',
@@ -122,7 +122,6 @@ function PriceCard({
   period,
   tagline,
   checkoutHref,
-  bullets = PLAN_BULLETS,
   featured = false,
 }: {
   header: string
@@ -130,7 +129,6 @@ function PriceCard({
   period: string
   tagline: string
   checkoutHref: string
-  bullets?: string[]
   featured?: boolean
 }) {
   return (
@@ -174,7 +172,7 @@ function PriceCard({
         {tagline}
       </p>
       <ul role="list" className="mt-8 space-y-3 text-base">
-        {bullets.map((bullet) => (
+        {PLAN_BULLETS.map((bullet) => (
           <li key={bullet} className="flex items-start gap-3">
             <span
               aria-hidden="true"
@@ -230,7 +228,6 @@ export default function SubscriptionPage() {
             period="12 months"
             tagline="One payment, not a subscription. Save $1,674. A fixed 12-month term that does not renew. The annual fee is not refundable."
             checkoutHref="/api/checkout?plan=annual"
-            bullets={[...PLAN_BULLETS, 'Source files included.']}
             featured
           />
         </div>

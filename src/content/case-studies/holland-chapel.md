@@ -23,7 +23,7 @@ Holland Chapel runs on a design partnership that started on a monthly subscripti
 
 The early projects were typical small-church graphic needs: a Father's Day graphic, a Backyard Bible School series, a Celebrate Recovery banner that required rebuilding the logo from scratch because the original file had a clipping mask that would not print clean, a Blood Drive flyer, a 4th of July image, a Holland Chapel Serve campaign, a God's Design new series graphic, and a Wish List project.
 
-The lead pastor was a clear communicator, good at sending the source files needed and quick to pick a direction in a single reply. Each project moved through concept, selection, and finals in a clean two-round cycle.
+The lead pastor was a clear communicator, good at sending the materials needed and quick to pick a direction in a single reply. Each project moved through concept, selection, and finals in a clean two-round cycle.
 
 The per-project arrangement means the church can bring a sermon series, an event graphic, or a campaign like the Wish List whenever they need it.
 

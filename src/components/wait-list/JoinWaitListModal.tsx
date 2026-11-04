@@ -45,7 +45,6 @@ export function JoinWaitListModal({
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [churchDomain, setChurchDomain] = useState('')
-  const [referralCode, setReferralCode] = useState('')
 
   useEffect(() => setMounted(true), [])
 
@@ -58,7 +57,6 @@ export function JoinWaitListModal({
       setLastName('')
       setEmail('')
       setChurchDomain('')
-      setReferralCode('')
     }
   }, [open])
 
@@ -152,7 +150,6 @@ export function JoinWaitListModal({
           lastName: ln,
           email: value,
           churchDomain: dom,
-          referralCode: referralCode.trim(),
           source,
         }),
       })
@@ -315,23 +312,6 @@ export function JoinWaitListModal({
                         setChurchDomain(e.target.value)
                         if (error) setError(null)
                       }}
-                      disabled={status === 'submitting'}
-                      className={fieldClass}
-                    />
-                  </div>
-
-                  <div className="mt-4">
-                    <label htmlFor={`${titleId}-referral`} className="sr-only">
-                      Referral code (optional)
-                    </label>
-                    <input
-                      id={`${titleId}-referral`}
-                      type="text"
-                      name="referralCode"
-                      autoComplete="off"
-                      placeholder="Referral code (optional)"
-                      value={referralCode}
-                      onChange={(e) => setReferralCode(e.target.value)}
                       disabled={status === 'submitting'}
                       className={fieldClass}
                     />
