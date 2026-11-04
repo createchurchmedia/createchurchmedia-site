@@ -25,8 +25,8 @@ export default async function SubscribeSuccessPage({
     <>
       <PageIntro eyebrow="Subscribed" title="You're in.">
         <p>
-          Thanks for subscribing. Emily will be in touch within 24 hours to
-          get you set up.
+          Thanks for subscribing. Emily will be in touch soon to get you set
+          up.
         </p>
       </PageIntro>
 
@@ -52,8 +52,7 @@ export default async function SubscribeSuccessPage({
                 >
                   Manage your subscription
                 </a>{' '}
-                to update your card or view invoices. Monthly plans can cancel
-                any time. The annual plan is a single payment and does not renew.
+                to update your card or view invoices. Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
               </p>
             ) : null}
           </div>

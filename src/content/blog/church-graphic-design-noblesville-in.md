@@ -15,7 +15,7 @@ faqs:
   - question: "What church design work do Noblesville churches request most?"
     answer: "Sermon series art is the most common request, followed closely by social media graphics and announcement graphics. Signage and event branding come up seasonally, especially around Easter, back to school, and Christmas. The subscription covers all of it under one flat fee, so churches stop deciding project by project whether design is in the budget."
   - question: "How much does ongoing church graphic design cost in Noblesville?"
-    answer: "I charge a flat $697 per month for unlimited requests and revisions. That is the whole price. There are no per-project quotes, no rush fees, and no surprise invoices. For most Noblesville churches it lands well under what a part-time hire or a string of freelance projects would cost over a year."
+    answer: "I charge a flat $697 per month for unlimited requests and revisions. There are no per-project quotes and no rush fees. For most Noblesville churches it lands well under what a part-time hire or a string of freelance projects would cost over a year."
 ---
 
 If you run communications at a church in Noblesville, you already know the design problem. It is not that nobody can make a graphic. Somebody on your team can always make a graphic. The problem is that the graphic for this week looks nothing like the graphic from three weeks ago, and the series art does not match the social posts, and the lobby sign is using a font nobody chose on purpose.

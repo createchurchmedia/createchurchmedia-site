@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Subscription',
   description:
-    'One flat fee. Unlimited graphic design for churches. $697 per month or $6,690 annual prepay. Same designer, same access, same turn around times.',
+    'One flat fee. Unlimited graphic design for churches. $697 per month or $6,690 annual prepay. Same designer, same access, same turnaround.',
   path: '/subscription',
 })
 
@@ -22,8 +22,7 @@ const PLAN_BULLETS = [
   'One designer.',
   'Unlimited requests.',
   'Unlimited revisions.',
-  'Same-day rush when possible.',
-  'Source files included.',
+  'Seven-day turnaround. Same-day depends on availability.',
 ]
 
 const CATEGORIES = [
@@ -68,22 +67,22 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'How fast is turnaround?',
     answer:
-      'Standard turnaround is one full week (seven days), and I ask your team to strive to give at least one week of notice. I understand that is not always possible. Flag the urgency and I will do my best to accommodate a same-day rush, though same-day cannot be guaranteed.',
+      'Standard turnaround is seven days, and I ask your team to strive to give at least one week of notice. I understand that is not always possible. Flag the urgency if something is a rush. Same-day turnaround is possible depending on my availability, but it is not guaranteed.',
   },
   {
     question: 'What is not included?',
     answer:
-      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text.',
+      'This subscription is strictly graphic design. It does not include video production or editing, website design or coding, or weekly sermon notes or presentation slides, such as PowerPoint or ProPresenter scripture and sermon slides. Booklet-style projects are limited to four pages or fewer. For larger booklets, manuals, and annual reports, I can provide a few templates for your team to build from, but I am unable to design the full document with your content and text. On the monthly plan, print, postage, stock, and font licenses are extra, paid by you.',
   },
   {
     question: 'Is there a contract?',
     answer:
-      'The monthly plan is month to month, with no long-term contract. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
   },
   {
     question: 'Can I cancel or get a refund?',
     answer:
-      'On the monthly plan you can cancel any time. Canceling stops future billing, does not refund the current billing period, and you keep access through the end of it. The annual fee is paid in full at the start of the term and is not refundable, and the annual plan cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 12-month term.',
+      'On the monthly plan, either of us can end the subscription by email notice, and you also cancel through the billing portal. It ends at the end of the month already paid. That month is not refundable, and you keep access through its last day. The annual fee is paid in full at the start of the term and is not refundable, and the annual plan cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 12-month term.',
   },
   {
     question: 'What if I have a slow month?',
@@ -93,7 +92,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What about file ownership?',
     answer:
-      'You own everything I design for you. Final files, source files, brand assets. If we ever part ways, you keep everything already delivered.',
+      'On the monthly plan, you own the finished work, and I may display it in my portfolio and marketing. On the annual plan, everything I design for you belongs to you: final files, source files, and brand assets. If we ever part ways, you keep everything already delivered.',
   },
   {
     question: 'Will I work with the same designer every time?',
@@ -123,6 +122,7 @@ function PriceCard({
   period,
   tagline,
   checkoutHref,
+  bullets = PLAN_BULLETS,
   featured = false,
 }: {
   header: string
@@ -130,6 +130,7 @@ function PriceCard({
   period: string
   tagline: string
   checkoutHref: string
+  bullets?: string[]
   featured?: boolean
 }) {
   return (
@@ -173,7 +174,7 @@ function PriceCard({
         {tagline}
       </p>
       <ul role="list" className="mt-8 space-y-3 text-base">
-        {PLAN_BULLETS.map((bullet) => (
+        {bullets.map((bullet) => (
           <li key={bullet} className="flex items-start gap-3">
             <span
               aria-hidden="true"
@@ -208,7 +209,7 @@ export default function SubscriptionPage() {
       <PageIntro eyebrow="Subscription" title="One flat fee.">
         <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
         <p className="mt-4">
-          A flat subscription, monthly or annual, with a standard one-week turnaround and same-day rush when possible. One designer who answers her own messages. Revisions are part of the deal.
+          A flat subscription, monthly or annual, with a standard seven-day turnaround. Same-day is possible depending on my availability, but not guaranteed. One designer who answers her own messages. Revisions are part of the deal.
         </p>
       </PageIntro>
 
@@ -220,7 +221,7 @@ export default function SubscriptionPage() {
             header="Monthly"
             price="$697"
             period="month"
-            tagline="Pay month to month. Cancel any time. Every file is yours to keep."
+            tagline="Pay month to month. To end it, give email notice and cancel in the billing portal, effective at the end of the month already paid."
             checkoutHref="/api/checkout"
           />
           <PriceCard
@@ -229,6 +230,7 @@ export default function SubscriptionPage() {
             period="12 months"
             tagline="One payment, not a subscription. Save $1,674. A fixed 12-month term that does not renew. The annual fee is not refundable."
             checkoutHref="/api/checkout?plan=annual"
+            bullets={[...PLAN_BULLETS, 'Source files included.']}
             featured
           />
         </div>

@@ -22,6 +22,11 @@ export const siteConfig = {
     monthly: 697,
     annual: 6690,
   },
+  // The signed-agreement PDFs for each plan. Linked from the terms page and checkout.
+  agreements: {
+    monthly: '/agreements/CCM-Monthly-Subscription-Agreement-v1.pdf',
+    annual: '/agreements/CCM-Annual-Subscription-Agreement-v6.pdf',
+  },
   // The Stripe Price for the annual plan. Used by checkout and the term reminder.
   annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',
   // The wait list is the only call to action. People join the list, Emily gets

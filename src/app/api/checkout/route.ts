@@ -20,6 +20,10 @@ type Plan = keyof typeof PRICE_IDS
  * browser straight to Stripe's hosted checkout page. A plain
  * <a href="/api/checkout"> (or ?plan=annual) works with no client JS required.
  *
+ * The buyer must tick a required checkbox agreeing to the plan's agreement, and
+ * Stripe records that on the session. Stripe needs a terms of service URL in the
+ * Dashboard (Settings -> Public details) for this to work.
+ *
  * allow_promotion_codes lets a monthly subscriber enter a Stripe promo code
  * (CCM697 still exists in Stripe but is no longer advertised). Annual is already the discounted tier, so promo codes are not
  * offered there.
@@ -50,6 +54,11 @@ export async function GET(req: Request): Promise<NextResponse> {
     // One-time payments only get an invoice when asked. Subscriptions always do.
     params.set('invoice_creation[enabled]', 'true')
   }
+  params.set('consent_collection[terms_of_service]', 'required')
+  params.set(
+    'custom_text[terms_of_service_acceptance][message]',
+    `I agree to the [${plan === 'annual' ? 'Annual' : 'Monthly'} Subscription Agreement](${siteConfig.url}${siteConfig.agreements[plan]}).`,
+  )
   params.set('success_url', `${origin}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`)
   params.set('cancel_url', `${origin}/subscribe`)
 

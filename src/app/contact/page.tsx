@@ -89,7 +89,7 @@ export default function ContactPage() {
               <p className="mt-6 text-base text-neutral-600">
                 Unlimited church graphic design on a flat ${siteConfig.pricing.monthly} per
                 month subscription. One designer, unlimited requests and
-                revisions, every file yours to keep.
+                revisions, and the finished work is yours.
               </p>
             </Border>
           </FadeIn>

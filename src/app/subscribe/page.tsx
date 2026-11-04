@@ -45,8 +45,9 @@ export default function SubscribePage() {
                   <span className="text-base text-neutral-500">/ month</span>
                 </p>
                 <p className="mt-4 text-base leading-7 text-neutral-600">
-                  Billed monthly through Stripe. Cancel any time. Every file
-                  is yours to keep.
+                  Billed monthly through Stripe. Month to month. To end it, give
+                  email notice and cancel in the billing portal, effective at
+                  the end of the month already paid. The finished work is yours.
                 </p>
 
                 <div className="mt-8">
@@ -129,7 +130,7 @@ export default function SubscribePage() {
               </h2>
               <p className="mt-6 text-base text-neutral-600">
                 Manage your subscription, update your card, or view invoices.
-                Monthly plans can cancel any time. The annual plan is a single payment and does not renew.
+                Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
               </p>
               <a
                 href={siteConfig.billingPortalUrl}

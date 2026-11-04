@@ -55,7 +55,8 @@ export default function StartPage() {
                 <span className="text-base text-neutral-500">/month</span>
               </p>
               <p className="mt-4 text-base text-neutral-600">
-                Cancel any time. No long-term commitment.
+                Month to month. To end it, give email notice and cancel in the
+                billing portal, effective at the end of the month already paid.
               </p>
               <a
                 href="/api/checkout"

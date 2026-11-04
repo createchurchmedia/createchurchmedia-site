@@ -33,9 +33,9 @@ const FEATURES = [
       'Send as many requests as you need and submit as many revisions as you need until you love the finished design. Everything runs through one shared queue with one designer. Receive sizes of each design for every platform you use.',
   },
   {
-    title: 'Fast turn around times.',
+    title: 'Seven-day turnaround.',
     body:
-      'Standard turnaround is one full week, and I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day rush requests are accommodated when possible, though same-day cannot be guaranteed. You are always free to email me anytime.',
+      'Standard turnaround is seven days, and I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day turnaround is possible depending on my availability, but it is not guaranteed. You are always free to email me anytime.',
   },
 ]
 
@@ -105,7 +105,7 @@ export default function HomePage() {
       <section aria-label="The offer">
       <SectionIntro
         eyebrow="The offer"
-        title="One designer. One flat fee. Fast turn around times."
+        title="One designer. One flat fee. Seven-day turnaround."
         className="mt-24 sm:mt-32 lg:mt-40"
         aside={
           <FadeIn
@@ -117,7 +117,7 @@ export default function HomePage() {
         }
       >
         <p>
-          I design for churches on a flat $697 per month subscription. I become your remote graphic designer, on call, with fast turn around times.
+          I design for churches on a flat $697 per month subscription. I become your remote graphic designer, on call, with a standard seven-day turnaround.
         </p>
       </SectionIntro>
 

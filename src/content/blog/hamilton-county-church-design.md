@@ -32,7 +32,7 @@ Subscription design solves both at the same time, which is the whole reason for 
 
 ## One designer, one fee, one brand
 
-The model is simple. One designer holds your entire visual system. You send unlimited requests each month and as many revisions as it takes. The cost is a flat $697 per month, full stop. No per-project quotes, no rush fees, no surprise invoices.
+The model is simple. One designer holds your entire visual system. You send unlimited requests each month and as many revisions as it takes. The cost is a flat $697 per month. No per-project quotes, no rush fees.
 
 Consistency comes for free because the same person is making every graphic inside the same system. Cost predictability comes for free because the number never changes. For a Hamilton County church that has been wrestling with both problems for years, solving them in one move is a relief.
 
