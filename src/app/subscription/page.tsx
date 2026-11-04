@@ -62,7 +62,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What does "unlimited" actually mean?',
     answer:
-      'Unlimited requests and unlimited revisions at one flat price, inside a single shared queue with one designer. Requests are handled in the order they arrive, and flagged rush work goes first. We work together until you are completely happy with the finished project. Unlimited does not promise unlimited simultaneous projects. If the number of projects grows beyond what one designer can realistically complete, I reserve the right to limit your active projects to a reasonable amount.',
+      'Unlimited requests and unlimited revisions at one flat price, inside a single shared queue with one designer. Requests are handled in the order they arrive, and flagged rush work goes first. You can request as many revisions as you need on each project. Unlimited does not promise unlimited simultaneous projects. If the number of projects grows beyond what one designer can realistically complete, I reserve the right to limit your active projects to a reasonable amount.',
   },
   {
     question: 'How fast is turnaround?',

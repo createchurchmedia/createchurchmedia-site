@@ -42,7 +42,7 @@ A designer in Noblesville who knows the local church landscape brings context a 
 
 ## How the subscription handles all of it
 
-I design for churches on a flat $697 per month subscription. You send as many requests as you need each month and as many revisions as it takes until you love the result. Sermon series, social, announcement graphics, signage, event branding. It all lives under one fee, so the question stops being "can we afford a designer for this" and becomes "what do we need designed this week."
+I design for churches on a flat $697 per month subscription. You send as many requests as you need each month, with unlimited revisions. Sermon series, social, announcement graphics, signage, event branding. It all lives under one fee, so the question stops being "can we afford a designer for this" and becomes "what do we need designed this week."
 
 That shift is the whole point. When design is a fixed line item instead of a per-project gamble, your team stops rationing it and starts using it.
 
