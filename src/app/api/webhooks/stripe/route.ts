@@ -9,8 +9,8 @@ export const dynamic = 'force-dynamic'
 /**
  * Stripe webhook. Emails Emily when a monthly subscriber signs up or cancels,
  * or when an annual one-time payment succeeds or fails. Emails each new client a
- * welcome note with their billing portal link, and every paying client their
- * invoice (invoice.paid covers both plans, including monthly renewals). Sent via
+ * welcome note with their billing portal link, and alerts Emily 7 days before a
+ * monthly renewal. Stripe emails clients their own invoices and receipts. Sent via
  * Resend, using the same RESEND_API_KEY already set in Vercel for the wait
  * list and contact forms.
  *
@@ -27,7 +27,10 @@ export const dynamic = 'force-dynamic'
  * https://createchurchmedia.com/api/webhooks/stripe
  * Select events: customer.subscription.created, customer.subscription.deleted,
  * checkout.session.completed, checkout.session.async_payment_succeeded,
- * checkout.session.async_payment_failed, invoice.paid
+ * checkout.session.async_payment_failed, invoice.upcoming
+ *
+ * The 7-day timing comes from Stripe Dashboard -> Settings -> Billing ->
+ * Subscriptions and emails -> Upcoming renewal events.
  */
 
 type StripeEvent = {
@@ -42,9 +45,9 @@ type StripeEvent = {
       customer_details?: { email?: string | null } | null
       // Present on invoice events.
       customer_email?: string | null
-      hosted_invoice_url?: string | null
-      number?: string | null
-      amount_paid?: number
+      amount_due?: number
+      next_payment_attempt?: number | null
+      period_end?: number
     }
   }
 }
@@ -164,22 +167,26 @@ export async function POST(req: Request): Promise<NextResponse> {
   const object = event.data?.object
   const customerId = object?.customer
 
-  if (event.type === 'invoice.paid') {
-    const amount = object?.amount_paid ?? 0
-    if (object?.customer_email && object.hosted_invoice_url && amount > 0) {
-      const dollars = (amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-      await sendEmail(
-        object.customer_email,
-        `Your ${siteConfig.brand} invoice${object.number ? ` ${object.number}` : ''}`,
-        [
-          `Thank you for your payment of ${dollars}.`,
-          `View or download your invoice here:\n${object.hosted_invoice_url}`,
-          `You can see all of your invoices in your billing portal:\n${siteConfig.billingPortalUrl}`,
-          `${siteConfig.designer}\n${siteConfig.brand}`,
-        ].join('\n\n'),
-        `invoice-${event.id}`,
-      )
-    }
+  if (event.type === 'invoice.upcoming') {
+    const dollars = ((object?.amount_due ?? 0) / 100).toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    })
+    const seconds = object?.next_payment_attempt ?? object?.period_end
+    const date = seconds
+      ? new Date(seconds * 1000).toLocaleDateString('en-US', {
+          dateStyle: 'long',
+          timeZone: 'America/Indiana/Indianapolis',
+        })
+      : 'soon'
+    const client =
+      object?.customer_email ||
+      (customerId && secretKey ? await lookupCustomerEmail(customerId, secretKey) : customerId) ||
+      'A client'
+    await notifyEmily(
+      '[CCM] Upcoming renewal',
+      `Upcoming renewal: ${client} renews on ${date} for ${dollars}.`,
+    )
     return NextResponse.json({ ok: true })
   }
 
