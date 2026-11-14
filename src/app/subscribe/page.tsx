@@ -137,7 +137,7 @@ const TONES = {
     bullet: 'bg-neutral-950',
   },
   dark: {
-    card: 'bg-neutral-950 text-white shadow-2xl ring-1 ring-neutral-900',
+    card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
@@ -238,7 +238,8 @@ export default function SubscriptionPage() {
       {/* Pricing cards */}
       <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
-        {/* On desktop the middle card sits on top, overlapping each side card by 20px. */}
+        {/* Desktop: one connected row. The raised middle card sits on top and hides the
+            side cards' inner edges. Phones: separate stacked cards. */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0">
           <PriceCard
             header="Annual prepay"
@@ -250,7 +251,7 @@ export default function SubscriptionPage() {
             badge="20%"
             badgeSide="left"
             tone="yellow"
-            className="lg:translate-x-5"
+            className="lg:translate-x-4 lg:rounded-r-none lg:pr-14"
           />
           <PriceCard
             header="6-month prepay"
@@ -261,7 +262,7 @@ export default function SubscriptionPage() {
             cta="Start the 6-month plan"
             badge="10%"
             tone="dark"
-            className="z-10"
+            className="z-10 lg:-mt-6"
           />
           <PriceCard
             header="Monthly"
@@ -270,7 +271,7 @@ export default function SubscriptionPage() {
             tagline="Pay month to month. Auto-renews each month until you cancel."
             checkoutHref="/api/checkout"
             cta="Subscribe monthly"
-            className="lg:-translate-x-5"
+            className="lg:-translate-x-4 lg:rounded-l-none lg:pl-14"
           />
         </div>
       </Container>
