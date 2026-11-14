@@ -13,7 +13,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Sign up',
   description:
-    'One flat fee. Unlimited graphic design for churches. $697 per month or $6,690 annual prepay. Same designer, same access, same turnaround.',
+    'One flat fee. Unlimited graphic design for churches. $697 per month, $3,763.80 for 6 months, or $6,690 annual prepay. Same designer, same access, same turnaround.',
   path: '/subscribe',
 })
 
@@ -76,12 +76,12 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Is there a contract?',
     answer:
-      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The 6-month plan is a fixed 6-month term, paid upfront as one payment, and saves you $418.20. It is a one-time payment, so it does not renew. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
   },
   {
     question: 'Can I cancel or get a refund?',
     answer:
-      'On the monthly plan, either of us can end the subscription by email notice, and you also cancel through the billing portal. It ends at the end of the month already paid. That month is not refundable, and you keep access through its last day. The annual fee is paid in full at the start of the term and is not refundable, and the annual plan cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 12-month term.',
+      'On the monthly plan, either of us can end the subscription by email notice, and you also cancel through the billing portal. It ends at the end of the month already paid. That month is not refundable, and you keep access through its last day. The 6-month and annual fees are paid in full at the start of the term and are not refundable, and those plans cannot be canceled early except as described in the terms. You are welcome to stop using my services at any point, but no refund is issued for the remaining months, and you keep full access through the end of the 6-month or 12-month term.',
   },
   {
     question: 'What if I have a slow month?',
@@ -121,6 +121,8 @@ function PriceCard({
   period,
   tagline,
   checkoutHref,
+  cta,
+  badge,
   featured = false,
 }: {
   header: string
@@ -128,6 +130,8 @@ function PriceCard({
   period: string
   tagline: string
   checkoutHref: string
+  cta: string
+  badge?: string
   featured?: boolean
 }) {
   return (
@@ -138,15 +142,15 @@ function PriceCard({
           : 'relative flex flex-col rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
       }
     >
-      {featured && (
+      {badge && (
         <div
-          aria-label="Save 20%"
+          aria-label={`Save ${badge}`}
           className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
         >
           <span className="text-center text-xs font-bold leading-tight text-neutral-950">
             Save
             <br />
-            20%
+            {badge}
           </span>
         </div>
       )}
@@ -190,7 +194,7 @@ function PriceCard({
               : 'block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800'
           }
         >
-          {featured ? 'Start the annual plan' : 'Subscribe monthly'}
+          {cta}
         </a>
       </div>
     </FadeIn>
@@ -206,20 +210,30 @@ export default function SubscriptionPage() {
       <PageIntro eyebrow="One flat fee" title="Sign up.">
         <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
         <p className="mt-4">
-          A flat subscription, monthly or annual, with a standard seven-day turnaround. Same-day is possible depending on my availability, but not guaranteed. One designer who answers her own messages. Revisions are part of the deal.
+          A flat subscription, monthly, 6-month, or annual, with a standard seven-day turnaround. Same-day is possible depending on my availability, but not guaranteed. One designer who answers her own messages. Revisions are part of the deal.
         </p>
       </PageIntro>
 
       {/* Pricing cards */}
       <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <PriceCard
             header="Monthly"
             price="$697"
             period="month"
             tagline="Pay month to month. To end it, give email notice and cancel in the billing portal, effective at the end of the month already paid."
             checkoutHref="/api/checkout"
+            cta="Subscribe monthly"
+          />
+          <PriceCard
+            header="6-month prepay"
+            price="$3,763.80"
+            period="6 months"
+            tagline="One payment, not a subscription. Save $418.20. A fixed 6-month term that does not renew. The 6-month fee is not refundable."
+            checkoutHref="/api/checkout?plan=6month"
+            cta="Start the 6-month plan"
+            badge="10%"
           />
           <PriceCard
             header="Annual prepay"
@@ -227,6 +241,8 @@ export default function SubscriptionPage() {
             period="12 months"
             tagline="One payment, not a subscription. Save $1,674. A fixed 12-month term that does not renew. The annual fee is not refundable."
             checkoutHref="/api/checkout?plan=annual"
+            cta="Start the annual plan"
+            badge="20%"
             featured
           />
         </div>
@@ -293,7 +309,7 @@ export default function SubscriptionPage() {
           </h2>
           <p className="mt-6 text-base text-neutral-600">
             Manage your subscription, update your card, or view invoices.
-            Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
+            Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The 6-month and annual plans are single payments and do not renew.
           </p>
           <a
             href={siteConfig.billingPortalUrl}

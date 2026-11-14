@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 /**
  * Stripe webhook. Emails Emily when a monthly subscriber signs up or cancels,
- * or when an annual one-time payment succeeds or fails. Emails each new client a
+ * or when a 6-month or annual one-time payment succeeds or fails. Emails each new client a
  * welcome note with their billing portal link, and alerts Emily 7 days before a
  * monthly renewal. Stripe emails clients their own invoices and receipts. Sent via
  * Resend, using the same RESEND_API_KEY already set in Vercel for the wait
@@ -39,8 +39,9 @@ type StripeEvent = {
   data: {
     object: {
       customer?: string
-      // Present on Checkout Session events, which is how the annual plan reports.
+      // Present on Checkout Session events, which is how the prepaid plans report.
       mode?: string
+      metadata?: { plan?: string } | null
       payment_status?: string
       customer_details?: { email?: string | null } | null
       // Present on invoice events.
@@ -190,10 +191,20 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ ok: true })
   }
 
-  // The annual plan is a one-time payment, so it never fires subscription events.
-  // Bank payments settle later: "completed" arrives unpaid, then an async event.
+  // The 6-month and annual plans are one-time payments, so they never fire
+  // subscription events. Bank payments settle later: "completed" arrives unpaid,
+  // then an async event.
   if (object?.mode === 'payment') {
     const buyer = object.customer_details?.email || customerId || 'A church'
+    const sixMonth = object.metadata?.plan === 'sixMonth'
+    const plan = sixMonth
+      ? { name: '6-month', title: '6-month', price: '$3,763.80', term: '6-month' }
+      : {
+          name: 'annual',
+          title: 'Annual',
+          price: `$${siteConfig.pricing.annual.toLocaleString()}`,
+          term: '12-month',
+        }
     const paid =
       (event.type === 'checkout.session.completed' && object.payment_status === 'paid') ||
       event.type === 'checkout.session.async_payment_succeeded'
@@ -203,13 +214,13 @@ export async function POST(req: Request): Promise<NextResponse> {
         await sendWelcomeEmail(object.customer_details.email, event.id)
       }
       await notifyEmily(
-        '[CCM] New annual plan',
-        `New annual plan: ${buyer} just paid $${siteConfig.pricing.annual.toLocaleString()} for the 12-month CCM annual plan.`,
+        `[CCM] New ${plan.name} plan`,
+        `New ${plan.name} plan: ${buyer} just paid ${plan.price} for the ${plan.term} CCM ${plan.name} plan.`,
       )
     } else if (event.type === 'checkout.session.async_payment_failed') {
       await notifyEmily(
-        '[CCM] Annual plan payment failed',
-        `Annual plan payment failed: the bank payment from ${buyer} did not go through.`,
+        `[CCM] ${plan.title} plan payment failed`,
+        `${plan.title} plan payment failed: the bank payment from ${buyer} did not go through.`,
       )
     }
     return NextResponse.json({ ok: true })

@@ -98,6 +98,12 @@ export function OrganizationJsonLd() {
       },
       {
         '@type': 'Offer',
+        name: '6-Month Prepay',
+        price: String(siteConfig.pricing.sixMonth),
+        priceCurrency: 'USD',
+      },
+      {
+        '@type': 'Offer',
         name: 'Annual Prepay',
         price: String(siteConfig.pricing.annual),
         priceCurrency: 'USD',
@@ -153,6 +159,12 @@ export function ServiceJsonLd() {
           priceCurrency: 'USD',
           unitText: 'MONTH',
         },
+      },
+      {
+        '@type': 'Offer',
+        name: '6-month prepay',
+        price: siteConfig.pricing.sixMonth,
+        priceCurrency: 'USD',
       },
       {
         '@type': 'Offer',

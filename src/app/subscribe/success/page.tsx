@@ -52,7 +52,7 @@ export default async function SubscribeSuccessPage({
                 >
                   Manage your subscription
                 </a>{' '}
-                to update your card or view invoices. Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The annual plan is a single payment and does not renew.
+                to update your card or view invoices. Monthly plans end by email notice and cancellation in the billing portal, effective at the end of the month already paid. The 6-month and annual plans are single payments and do not renew.
               </p>
             ) : null}
           </div>

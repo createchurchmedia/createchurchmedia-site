@@ -6,27 +6,34 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 // The Stripe Prices for the two plans (live mode). Not secrets, safe to keep in
-// source. Monthly is recurring. Annual is a one-time charge for a fixed 12-month
-// term, so it can never renew.
+// source. Monthly is recurring. The 6-month and annual plans are one-time charges
+// for a fixed term, so they can never renew.
 const PRICE_IDS = {
   monthly: 'price_1UO1JvFv2iaRvQLlMhP0Juqb', // $697/month
+  sixMonth: siteConfig.sixMonthPriceId, // $3,763.80 one-time, 10% off monthly
   annual: siteConfig.annualPriceId, // $6,690 one-time, about 20% off monthly
 } as const
 
 type Plan = keyof typeof PRICE_IDS
 
+const AGREEMENT_NAMES: Record<Plan, string> = {
+  monthly: 'Monthly',
+  sixMonth: '6-Month',
+  annual: 'Annual',
+}
+
 /**
  * Starts a Stripe Checkout session for the chosen plan and sends the
  * browser straight to Stripe's hosted checkout page. A plain
- * <a href="/api/checkout"> (or ?plan=annual) works with no client JS required.
+ * <a href="/api/checkout"> (or ?plan=6month or ?plan=annual) works with no client JS required.
  *
  * The buyer must tick a required checkbox agreeing to the plan's agreement, and
  * Stripe records that on the session. Stripe needs a terms of service URL in the
  * Dashboard (Settings -> Public details) for this to work.
  *
  * allow_promotion_codes lets a monthly subscriber enter a Stripe promo code
- * (CCM697 still exists in Stripe but is no longer advertised). Annual is already the discounted tier, so promo codes are not
- * offered there.
+ * (CCM697 still exists in Stripe but is no longer advertised). The 6-month and annual
+ * plans are already discounted, so promo codes are not offered there.
  *
  * Requires STRIPE_SECRET_KEY in the environment. That key is never
  * committed to the repo; it lives only in Vercel project env vars.
@@ -39,16 +46,19 @@ export async function GET(req: Request): Promise<NextResponse> {
 
   const origin = new URL(req.url).origin
   const planParam = new URL(req.url).searchParams.get('plan')
-  const plan: Plan = planParam === 'annual' ? 'annual' : 'monthly'
+  const plan: Plan =
+    planParam === 'annual' ? 'annual' : planParam === '6month' ? 'sixMonth' : 'monthly'
 
   const params = new URLSearchParams()
-  params.set('mode', plan === 'annual' ? 'payment' : 'subscription')
+  params.set('mode', plan === 'monthly' ? 'subscription' : 'payment')
   params.set('line_items[0][price]', PRICE_IDS[plan])
   params.set('line_items[0][quantity]', '1')
   if (plan === 'monthly') {
     params.set('allow_promotion_codes', 'true')
   } else {
-    // Payment mode skips creating a Customer unless asked. Keep one so an annual
+    // Lets the webhook tell the 6-month and annual plans apart.
+    params.set('metadata[plan]', plan)
+    // Payment mode skips creating a Customer unless asked. Keep one so a prepaid
     // church has a record in Stripe and can sign in to the billing portal.
     params.set('customer_creation', 'always')
     // One-time payments only get an invoice when asked. Subscriptions always do.
@@ -57,7 +67,7 @@ export async function GET(req: Request): Promise<NextResponse> {
   params.set('consent_collection[terms_of_service]', 'required')
   params.set(
     'custom_text[terms_of_service_acceptance][message]',
-    `I agree to the [${plan === 'annual' ? 'Annual' : 'Monthly'} Subscription Agreement](${siteConfig.url}${siteConfig.agreements[plan]}).`,
+    `I agree to the [${AGREEMENT_NAMES[plan]} Subscription Agreement](${siteConfig.url}${siteConfig.agreements[plan]}).`,
   )
   params.set('success_url', `${origin}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`)
   params.set('cancel_url', `${origin}/subscribe`)
