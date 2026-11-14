@@ -127,6 +127,14 @@ const TONES = {
     // Subtle on white cards so it does not compete with the featured card.
     badge: 'bg-white text-neutral-950 ring-2 ring-[var(--color-cta)]',
   },
+  yellow: {
+    card: 'bg-[var(--color-cta)] text-neutral-950 shadow-sm ring-1 ring-[var(--color-cta)]',
+    header: 'text-neutral-800',
+    muted: 'text-neutral-800',
+    body: 'text-neutral-800',
+    button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
+    badge: 'bg-neutral-950 text-[var(--color-cta)]',
+  },
   featured: {
     card: 'bg-neutral-950 text-white shadow-2xl ring-[3px] ring-[var(--color-cta)] lg:-my-5 lg:py-14',
     header: 'text-[var(--color-cta)]',
@@ -251,6 +259,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=annual"
             cta="Start the annual plan"
             badge="20%"
+            tone="yellow"
           />
         </div>
       </Container>
