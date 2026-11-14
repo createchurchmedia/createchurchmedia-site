@@ -115,7 +115,7 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ]
 
-// Card tones: yellow for Annual, black for the featured 6-month plan, white for Monthly.
+// Card tones: white for Annual and Monthly, black for the featured 6-month plan.
 const TONES = {
   light: {
     card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
@@ -123,18 +123,8 @@ const TONES = {
     muted: 'text-neutral-500',
     body: 'text-neutral-600',
     button: 'bg-neutral-950 text-white hover:bg-neutral-800',
-    // Subtle on white cards so it does not compete with the featured card.
-    badge: 'bg-white text-neutral-950 ring-2 ring-[var(--color-cta)]',
+    badge: 'bg-[var(--color-cta)] text-neutral-950',
     bullet: 'bg-[var(--color-cta)]',
-  },
-  yellow: {
-    card: 'bg-[var(--color-cta)] text-neutral-950 shadow-sm ring-1 ring-[var(--color-cta)]',
-    header: 'text-neutral-800',
-    muted: 'text-neutral-800',
-    body: 'text-neutral-800',
-    button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
-    badge: 'bg-neutral-950 text-[var(--color-cta)]',
-    bullet: 'bg-neutral-950',
   },
   dark: {
     card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
@@ -155,7 +145,6 @@ function PriceCard({
   checkoutHref,
   cta,
   badge,
-  badgeSide = 'right',
   tone = 'light',
   className = '',
 }: {
@@ -166,17 +155,16 @@ function PriceCard({
   checkoutHref: string
   cta: string
   badge?: string
-  badgeSide?: 'left' | 'right'
   tone?: keyof typeof TONES
   className?: string
 }) {
   const t = TONES[tone]
   return (
-    <FadeIn className={`relative flex flex-col rounded-3xl p-10 ${t.card} ${className}`}>
+    <FadeIn className={`relative flex flex-col rounded-3xl p-10 pt-14 ${t.card} ${className}`}>
       {badge && (
         <div
           aria-label={`Save ${badge}`}
-          className={`absolute ${badgeSide === 'left' ? '-left-4' : '-right-4'} -top-4 flex h-16 w-16 items-center justify-center rounded-full shadow-lg ${t.badge}`}
+          className={`absolute left-1/2 -top-8 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full shadow-lg ${t.badge}`}
         >
           <span className="text-center text-xs font-bold leading-tight">
             Save
@@ -238,8 +226,9 @@ export default function SubscriptionPage() {
       {/* Pricing cards */}
       <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
-        {/* Desktop: one connected row. The raised middle card sits on top and hides the
-            side cards' inner edges. Phones: separate stacked cards. */}
+        {/* Desktop: one connected row. The taller middle card sits on top, extends 24px
+            above and below the side cards, and hides their inner edges. Phones:
+            separate stacked cards. */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0">
           <PriceCard
             header="Annual prepay"
@@ -249,8 +238,6 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=annual"
             cta="Start the annual plan"
             badge="20%"
-            badgeSide="left"
-            tone="yellow"
             className="lg:translate-x-4 lg:rounded-r-none lg:pr-14"
           />
           <PriceCard
@@ -262,7 +249,7 @@ export default function SubscriptionPage() {
             cta="Start the 6-month plan"
             badge="10%"
             tone="dark"
-            className="z-10 lg:-mt-6"
+            className="z-10 lg:-my-6"
           />
           <PriceCard
             header="Monthly"
