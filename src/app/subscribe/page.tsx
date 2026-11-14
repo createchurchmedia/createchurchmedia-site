@@ -122,7 +122,7 @@ const TONES = {
     header: 'text-neutral-500',
     muted: 'text-neutral-500',
     body: 'text-neutral-600',
-    button: 'bg-neutral-950 text-white hover:bg-neutral-800',
+    button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
     badge: 'bg-[var(--color-cta)] text-neutral-950',
     bullet: 'bg-[var(--color-cta)]',
   },
