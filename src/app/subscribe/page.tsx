@@ -126,10 +126,10 @@ const TONES = {
     button: 'bg-neutral-950 text-white hover:bg-neutral-800',
   },
   gray: {
-    card: 'bg-[#3a3a3a] text-white shadow-lg ring-1 ring-[#3a3a3a]',
-    header: 'text-neutral-300',
-    muted: 'text-neutral-300',
-    body: 'text-neutral-200',
+    card: 'bg-[#606060] text-white shadow-lg ring-1 ring-[#606060]',
+    header: 'text-neutral-200',
+    muted: 'text-neutral-200',
+    body: 'text-neutral-100',
     button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
   },
   dark: {
