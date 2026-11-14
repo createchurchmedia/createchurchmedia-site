@@ -115,6 +115,32 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ]
 
+// Three card tones: white for Monthly, dark gray for 6-month, black for Annual,
+// so the cards step up visually and Annual stays the highlighted best value.
+const TONES = {
+  light: {
+    card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
+    header: 'text-neutral-500',
+    muted: 'text-neutral-500',
+    body: 'text-neutral-600',
+    button: 'bg-neutral-950 text-white hover:bg-neutral-800',
+  },
+  gray: {
+    card: 'bg-[#3a3a3a] text-white shadow-lg ring-1 ring-[#3a3a3a]',
+    header: 'text-neutral-300',
+    muted: 'text-neutral-300',
+    body: 'text-neutral-200',
+    button: 'bg-white text-neutral-950 hover:bg-neutral-200',
+  },
+  dark: {
+    card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
+    header: 'text-[var(--color-cta)]',
+    muted: 'text-neutral-300',
+    body: 'text-neutral-300',
+    button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
+  },
+} as const
+
 function PriceCard({
   header,
   price,
@@ -123,7 +149,7 @@ function PriceCard({
   checkoutHref,
   cta,
   badge,
-  featured = false,
+  tone = 'light',
 }: {
   header: string
   price: string
@@ -132,16 +158,11 @@ function PriceCard({
   checkoutHref: string
   cta: string
   badge?: string
-  featured?: boolean
+  tone?: keyof typeof TONES
 }) {
+  const t = TONES[tone]
   return (
-    <FadeIn
-      className={
-        featured
-          ? 'relative flex flex-col rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900'
-          : 'relative flex flex-col rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
-      }
-    >
+    <FadeIn className={`relative flex flex-col rounded-3xl p-10 ${t.card}`}>
       {badge && (
         <div
           aria-label={`Save ${badge}`}
@@ -154,24 +175,18 @@ function PriceCard({
           </span>
         </div>
       )}
-      <p
-        className={
-          featured
-            ? 'font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]'
-            : 'font-display text-sm font-semibold uppercase tracking-wider text-neutral-500'
-        }
-      >
+      <p className={`font-display text-sm font-semibold uppercase tracking-wider ${t.header}`}>
         {header}
       </p>
       <p className="mt-6 flex flex-wrap items-baseline gap-x-2">
         <span className="font-display text-5xl font-semibold tracking-tight">
           {price}
         </span>
-        <span className={featured ? 'whitespace-nowrap text-base text-neutral-300' : 'whitespace-nowrap text-base text-neutral-500'}>
+        <span className={`whitespace-nowrap text-base ${t.muted}`}>
           / {period}
         </span>
       </p>
-      <p className={featured ? 'mt-4 text-base text-neutral-300' : 'mt-4 text-base text-neutral-600'}>
+      <p className={`mt-4 text-base ${t.body}`}>
         {tagline}
       </p>
       <ul role="list" className="mt-8 space-y-3 text-base">
@@ -188,11 +203,7 @@ function PriceCard({
       <div className="mt-auto pt-10">
         <a
           href={checkoutHref}
-          className={
-            featured
-              ? 'block w-full rounded-md bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110'
-              : 'block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800'
-          }
+          className={`block w-full rounded-md px-6 py-4 text-center text-sm font-semibold transition ${t.button}`}
         >
           {cta}
         </a>
@@ -234,6 +245,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=6month"
             cta="Start the 6-month plan"
             badge="10%"
+            tone="gray"
           />
           <PriceCard
             header="Annual prepay"
@@ -243,7 +255,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=annual"
             cta="Start the annual plan"
             badge="20%"
-            featured
+            tone="dark"
           />
         </div>
       </Container>
