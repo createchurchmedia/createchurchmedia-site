@@ -116,7 +116,7 @@ const FAQS: { question: string; answer: string }[] = [
 ]
 
 // Monthly and Annual share the plain white style so the featured 6-month card in
-// the middle draws the eye. The featured card is black, taller, and shadowed.
+// the middle draws the eye. The featured card is black with a yellow border.
 const TONES = {
   light: {
     card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
@@ -136,7 +136,7 @@ const TONES = {
     badge: 'bg-neutral-950 text-[var(--color-cta)]',
   },
   featured: {
-    card: 'bg-neutral-950 text-white shadow-2xl ring-[3px] ring-[var(--color-cta)] lg:-my-5 lg:py-14',
+    card: 'bg-neutral-950 text-white shadow-2xl ring-[3px] ring-[var(--color-cta)]',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
