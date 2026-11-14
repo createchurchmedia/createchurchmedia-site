@@ -7,8 +7,10 @@ import { cn } from '@/lib/cn'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { MarkerSwipe } from '@/components/MarkerSwipe'
-import { SignUpButton } from '@/components/sign-up/SignUpButton'
-import { navItems, siteConfig } from '@/lib/site-config'
+import { navItems, signUpPageUrl, siteConfig } from '@/lib/site-config'
+
+const SIGN_UP_BUTTON =
+  'inline-flex items-center justify-center rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 focus-visible:ring-offset-white'
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -95,11 +97,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <SignUpButton
-              source="header"
-              withArrow={false}
-              className="hidden sm:inline-flex"
-            />
+            <Link
+              href={signUpPageUrl}
+              aria-current={pathname === signUpPageUrl ? 'page' : undefined}
+              className={cn(SIGN_UP_BUTTON, 'hidden sm:inline-flex')}
+            >
+              Sign up
+            </Link>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -155,11 +159,13 @@ export function SiteHeader() {
               )
             })}
             <li className="mt-3">
-              <SignUpButton
-                source="header"
-                withArrow={false}
-                className="w-full"
-              />
+              <Link
+                href={signUpPageUrl}
+                aria-current={pathname === signUpPageUrl ? 'page' : undefined}
+                className={cn(SIGN_UP_BUTTON, 'w-full')}
+              >
+                Sign up
+              </Link>
             </li>
           </ul>
         </Container>
