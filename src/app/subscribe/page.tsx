@@ -163,11 +163,11 @@ function PriceCard({
       >
         {header}
       </p>
-      <p className="mt-6 flex items-baseline gap-2">
+      <p className="mt-6 flex flex-wrap items-baseline gap-x-2">
         <span className="font-display text-5xl font-semibold tracking-tight">
           {price}
         </span>
-        <span className={featured ? 'text-base text-neutral-300' : 'text-base text-neutral-500'}>
+        <span className={featured ? 'whitespace-nowrap text-base text-neutral-300' : 'whitespace-nowrap text-base text-neutral-500'}>
           / {period}
         </span>
       </p>
