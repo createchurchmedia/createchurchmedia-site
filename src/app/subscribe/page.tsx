@@ -222,7 +222,7 @@ export default function SubscriptionPage() {
             header="Monthly"
             price="$697"
             period="month"
-            tagline="Pay month to month. To end it, give email notice and cancel in the billing portal, effective at the end of the month already paid."
+            tagline="Pay month to month. Auto-renews each month until you cancel."
             checkoutHref="/api/checkout"
             cta="Subscribe monthly"
           />
