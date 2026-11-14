@@ -130,7 +130,7 @@ const TONES = {
     header: 'text-neutral-300',
     muted: 'text-neutral-300',
     body: 'text-neutral-200',
-    button: 'bg-white text-neutral-950 hover:bg-neutral-200',
+    button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
   },
   dark: {
     card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
