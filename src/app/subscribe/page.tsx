@@ -167,7 +167,7 @@ function PriceCard({
           className={`absolute left-1/2 -top-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full shadow-lg ${t.badge}`}
         >
           <span className="flex flex-col items-center font-bold leading-none">
-            <span className="text-xs">Save</span>
+            <span className="text-sm">Save</span>
             <span className="mt-0.5 text-xl">{badge}</span>
           </span>
         </div>
