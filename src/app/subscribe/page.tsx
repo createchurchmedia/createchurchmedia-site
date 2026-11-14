@@ -229,7 +229,7 @@ export default function SubscriptionPage() {
         {/* Desktop: one connected row. The taller middle card sits on top, extends 24px
             above and below the side cards, and hides their inner edges. Phones:
             separate stacked cards. */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:gap-0">
           <PriceCard
             header="Annual prepay"
             price="$6,690"
