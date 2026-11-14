@@ -43,7 +43,7 @@ export default function TermsPage() {
               </li>
               <li>
                 <a href="#six-month">6-month plan</a>: fixed 6-month term,
-                $3,763.80 as one payment.{' '}
+                $3,765 as one payment.{' '}
                 <a href={siteConfig.agreements.sixMonth}>
                   6-Month Subscription Agreement (PDF)
                 </a>
@@ -186,7 +186,7 @@ export default function TermsPage() {
 
             <h3>3. Term and Fee</h3>
             <p>
-              Six (6) months from the Start Date. Fee: $3,763.80, paid once in
+              Six (6) months from the Start Date. Fee: $3,765.00, paid once in
               full at createchurchmedia.com/subscribe (6-month plan) before
               services begin. Not refundable. Neither Party may end this
               Agreement early except under Section 4. Client may stop sending

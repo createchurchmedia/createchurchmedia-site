@@ -198,7 +198,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     const buyer = object.customer_details?.email || customerId || 'A church'
     const sixMonth = object.metadata?.plan === 'sixMonth'
     const plan = sixMonth
-      ? { name: '6-month', title: '6-month', price: '$3,763.80', term: '6-month' }
+      ? { name: '6-month', title: '6-month', price: '$3,765', term: '6-month' }
       : {
           name: 'annual',
           title: 'Annual',

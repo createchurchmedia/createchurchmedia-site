@@ -13,7 +13,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Sign up',
   description:
-    'One flat fee. Unlimited graphic design for churches. $697 per month, $3,763.80 for 6 months, or $6,690 annual prepay. Same designer, same access, same turnaround.',
+    'One flat fee. Unlimited graphic design for churches. $697 per month, $3,765 for 6 months, or $6,690 annual prepay. Same designer, same access, same turnaround.',
   path: '/subscribe',
 })
 
@@ -76,7 +76,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Is there a contract?',
     answer:
-      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The 6-month plan is a fixed 6-month term, paid upfront as one payment, and saves you $418.20. It is a one-time payment, so it does not renew. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
+      'Yes, each plan has its own agreement, and you agree to it at checkout. The monthly plan is month to month, with no fixed term. The 6-month plan is a fixed 6-month term, paid upfront as one payment, and saves you $417. It is a one-time payment, so it does not renew. The annual plan is a fixed 12-month term, paid upfront as one payment, and saves you $1,674. It is a one-time payment, so it does not renew. When the term ends, your church is welcome to sign up for another year, and pricing for a new term is set when you sign up.',
   },
   {
     question: 'Can I cancel or get a refund?',
@@ -228,9 +228,9 @@ export default function SubscriptionPage() {
           />
           <PriceCard
             header="6-month prepay"
-            price="$3,763.80"
+            price="$3,765"
             period="6 months"
-            tagline="One payment, not a subscription. Save $418.20. A fixed 6-month term that does not renew. The 6-month fee is not refundable."
+            tagline="One payment, not a subscription. Save $417. A fixed 6-month term that does not renew. The 6-month fee is not refundable."
             checkoutHref="/api/checkout?plan=6month"
             cta="Start the 6-month plan"
             badge="10%"

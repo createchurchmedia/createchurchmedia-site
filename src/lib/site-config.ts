@@ -20,8 +20,8 @@ export const siteConfig = {
     'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Westfield, IN.',
   pricing: {
     monthly: 697,
-    // 10% off six months of the monthly price, paid once.
-    sixMonth: 3763.8,
+    // About 10% off six months of the monthly price (rounded), paid once.
+    sixMonth: 3765,
     annual: 6690,
   },
   // The signed-agreement PDFs for each plan. Linked from the terms page and checkout.
@@ -33,7 +33,7 @@ export const siteConfig = {
   // The Stripe Price for the annual plan. Used by checkout and the term reminder.
   annualPriceId: 'price_1UYA7TFv2iaRvQLljMroppal',
   // The Stripe Price for the 6-month plan, also one-time. Used by checkout and the term reminder.
-  sixMonthPriceId: 'price_1UbVKWFv2iaRvQLlUkDGi1Z2',
+  sixMonthPriceId: 'price_1UbVSpFv2iaRvQLl2FkD5Mpb',
   // Talk to Emily is the main call to action. People fill out the form, Emily gets
   // an email alert, and she reaches out personally to schedule an appointment.
   signUpUrl: '/contact',

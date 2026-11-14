@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 // for a fixed term, so they can never renew.
 const PRICE_IDS = {
   monthly: 'price_1UO1JvFv2iaRvQLlMhP0Juqb', // $697/month
-  sixMonth: siteConfig.sixMonthPriceId, // $3,763.80 one-time, 10% off monthly
+  sixMonth: siteConfig.sixMonthPriceId, // $3,765 one-time, about 10% off monthly
   annual: siteConfig.annualPriceId, // $6,690 one-time, about 20% off monthly
 } as const
 
