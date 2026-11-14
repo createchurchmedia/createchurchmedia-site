@@ -115,8 +115,7 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ]
 
-// Monthly and Annual share the plain white style so the featured 6-month card in
-// the middle draws the eye. The featured card is black with a yellow border.
+// Card tones: white for Monthly, yellow for the 6-month plan, black for Annual.
 const TONES = {
   light: {
     card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
@@ -135,8 +134,8 @@ const TONES = {
     button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
     badge: 'bg-neutral-950 text-[var(--color-cta)]',
   },
-  featured: {
-    card: 'bg-neutral-950 text-white shadow-2xl ring-[3px] ring-[var(--color-cta)]',
+  dark: {
+    card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
@@ -249,7 +248,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=6month"
             cta="Start the 6-month plan"
             badge="10%"
-            tone="featured"
+            tone="yellow"
           />
           <PriceCard
             header="Annual prepay"
@@ -259,7 +258,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=annual"
             cta="Start the annual plan"
             badge="20%"
-            tone="yellow"
+            tone="dark"
           />
         </div>
       </Container>
