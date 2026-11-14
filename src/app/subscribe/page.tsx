@@ -128,7 +128,7 @@ const TONES = {
     badge: 'bg-white text-neutral-950 ring-2 ring-[var(--color-cta)]',
   },
   featured: {
-    card: 'bg-neutral-950 text-white shadow-2xl ring-1 ring-neutral-900 lg:-my-5 lg:py-14',
+    card: 'bg-neutral-950 text-white shadow-2xl ring-[3px] ring-[var(--color-cta)] lg:-my-5 lg:py-14',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
