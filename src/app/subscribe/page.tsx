@@ -160,16 +160,15 @@ function PriceCard({
 }) {
   const t = TONES[tone]
   return (
-    <FadeIn className={`relative flex flex-col rounded-3xl p-10 pt-14 ${t.card} ${className}`}>
+    <FadeIn className={`relative flex flex-col rounded-3xl p-10 pt-16 ${t.card} ${className}`}>
       {badge && (
         <div
           aria-label={`Save ${badge}`}
-          className={`absolute left-1/2 -top-8 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full shadow-lg ${t.badge}`}
+          className={`absolute left-1/2 -top-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full shadow-lg ${t.badge}`}
         >
-          <span className="text-center text-xs font-bold leading-tight">
-            Save
-            <br />
-            {badge}
+          <span className="flex flex-col items-center font-bold leading-none">
+            <span className="text-xs">Save</span>
+            <span className="mt-0.5 text-xl">{badge}</span>
           </span>
         </div>
       )}
