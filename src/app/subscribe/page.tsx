@@ -115,8 +115,8 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ]
 
-// Three card tones: white for Monthly, dark gray for 6-month, black for Annual,
-// so the cards step up visually and Annual stays the highlighted best value.
+// Monthly and Annual share the plain white style so the featured 6-month card in
+// the middle draws the eye. The featured card is black, taller, and shadowed.
 const TONES = {
   light: {
     card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
@@ -124,18 +124,11 @@ const TONES = {
     muted: 'text-neutral-500',
     body: 'text-neutral-600',
     button: 'bg-neutral-950 text-white hover:bg-neutral-800',
-    badge: 'bg-[var(--color-cta)] text-neutral-950',
+    // Subtle on white cards so it does not compete with the featured card.
+    badge: 'bg-white text-neutral-950 ring-2 ring-[var(--color-cta)]',
   },
-  gray: {
-    card: 'bg-[#606060] text-white shadow-lg ring-1 ring-[#606060]',
-    header: 'text-[var(--color-cta)]',
-    muted: 'text-neutral-200',
-    body: 'text-neutral-100',
-    button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
-    badge: 'bg-neutral-950 text-[var(--color-cta)]',
-  },
-  dark: {
-    card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
+  featured: {
+    card: 'bg-neutral-950 text-white shadow-2xl ring-1 ring-neutral-900 lg:-my-5 lg:py-14',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
@@ -248,7 +241,7 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=6month"
             cta="Start the 6-month plan"
             badge="10%"
-            tone="gray"
+            tone="featured"
           />
           <PriceCard
             header="Annual prepay"
@@ -258,7 +251,6 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=annual"
             cta="Start the annual plan"
             badge="20%"
-            tone="dark"
           />
         </div>
       </Container>
