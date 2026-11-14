@@ -124,13 +124,15 @@ const TONES = {
     muted: 'text-neutral-500',
     body: 'text-neutral-600',
     button: 'bg-neutral-950 text-white hover:bg-neutral-800',
+    badge: 'bg-[var(--color-cta)] text-neutral-950',
   },
   gray: {
     card: 'bg-[#606060] text-white shadow-lg ring-1 ring-[#606060]',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-200',
     body: 'text-neutral-100',
-    button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
+    button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
+    badge: 'bg-neutral-950 text-[var(--color-cta)]',
   },
   dark: {
     card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
@@ -138,6 +140,7 @@ const TONES = {
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
     button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
+    badge: 'bg-[var(--color-cta)] text-neutral-950',
   },
 } as const
 
@@ -166,9 +169,9 @@ function PriceCard({
       {badge && (
         <div
           aria-label={`Save ${badge}`}
-          className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
+          className={`absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full shadow-lg ${t.badge}`}
         >
-          <span className="text-center text-xs font-bold leading-tight text-neutral-950">
+          <span className="text-center text-xs font-bold leading-tight">
             Save
             <br />
             {badge}
