@@ -115,7 +115,7 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ]
 
-// Card tones: white for Monthly, yellow for the 6-month plan, black for Annual.
+// Card tones: yellow for Annual, black for the featured 6-month plan, white for Monthly.
 const TONES = {
   light: {
     card: 'bg-white text-neutral-950 shadow-sm ring-1 ring-neutral-200',
@@ -134,10 +134,10 @@ const TONES = {
     body: 'text-neutral-800',
     button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
     badge: 'bg-neutral-950 text-[var(--color-cta)]',
-    bullet: 'bg-white',
+    bullet: 'bg-neutral-950',
   },
   dark: {
-    card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
+    card: 'bg-neutral-950 text-white shadow-2xl ring-1 ring-neutral-900',
     header: 'text-[var(--color-cta)]',
     muted: 'text-neutral-300',
     body: 'text-neutral-300',
@@ -155,7 +155,9 @@ function PriceCard({
   checkoutHref,
   cta,
   badge,
+  badgeSide = 'right',
   tone = 'light',
+  className = '',
 }: {
   header: string
   price: string
@@ -164,15 +166,17 @@ function PriceCard({
   checkoutHref: string
   cta: string
   badge?: string
+  badgeSide?: 'left' | 'right'
   tone?: keyof typeof TONES
+  className?: string
 }) {
   const t = TONES[tone]
   return (
-    <FadeIn className={`relative flex flex-col rounded-3xl p-10 ${t.card}`}>
+    <FadeIn className={`relative flex flex-col rounded-3xl p-10 ${t.card} ${className}`}>
       {badge && (
         <div
           aria-label={`Save ${badge}`}
-          className={`absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full shadow-lg ${t.badge}`}
+          className={`absolute ${badgeSide === 'left' ? '-left-4' : '-right-4'} -top-4 flex h-16 w-16 items-center justify-center rounded-full shadow-lg ${t.badge}`}
         >
           <span className="text-center text-xs font-bold leading-tight">
             Save
@@ -234,14 +238,19 @@ export default function SubscriptionPage() {
       {/* Pricing cards */}
       <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        {/* On desktop the middle card sits on top, overlapping each side card by 20px. */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0">
           <PriceCard
-            header="Monthly"
-            price="$697"
-            period="month"
-            tagline="Pay month to month. Auto-renews each month until you cancel."
-            checkoutHref="/api/checkout"
-            cta="Subscribe monthly"
+            header="Annual prepay"
+            price="$6,690"
+            period="12 months"
+            tagline="One payment. Save $1,674. A fixed 12-month term."
+            checkoutHref="/api/checkout?plan=annual"
+            cta="Start the annual plan"
+            badge="20%"
+            badgeSide="left"
+            tone="yellow"
+            className="lg:translate-x-5"
           />
           <PriceCard
             header="6-month prepay"
@@ -251,17 +260,17 @@ export default function SubscriptionPage() {
             checkoutHref="/api/checkout?plan=6month"
             cta="Start the 6-month plan"
             badge="10%"
-            tone="yellow"
+            tone="dark"
+            className="z-10"
           />
           <PriceCard
-            header="Annual prepay"
-            price="$6,690"
-            period="12 months"
-            tagline="One payment. Save $1,674. A fixed 12-month term."
-            checkoutHref="/api/checkout?plan=annual"
-            cta="Start the annual plan"
-            badge="20%"
-            tone="dark"
+            header="Monthly"
+            price="$697"
+            period="month"
+            tagline="Pay month to month. Auto-renews each month until you cancel."
+            checkoutHref="/api/checkout"
+            cta="Subscribe monthly"
+            className="lg:-translate-x-5"
           />
         </div>
       </Container>
