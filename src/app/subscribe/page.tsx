@@ -125,6 +125,7 @@ const TONES = {
     button: 'bg-neutral-950 text-white hover:bg-neutral-800',
     // Subtle on white cards so it does not compete with the featured card.
     badge: 'bg-white text-neutral-950 ring-2 ring-[var(--color-cta)]',
+    bullet: 'bg-[var(--color-cta)]',
   },
   yellow: {
     card: 'bg-[var(--color-cta)] text-neutral-950 shadow-sm ring-1 ring-[var(--color-cta)]',
@@ -133,6 +134,7 @@ const TONES = {
     body: 'text-neutral-800',
     button: 'bg-neutral-950 text-[var(--color-cta)] hover:bg-neutral-800',
     badge: 'bg-neutral-950 text-[var(--color-cta)]',
+    bullet: 'bg-white',
   },
   dark: {
     card: 'bg-neutral-950 text-white shadow-xl ring-1 ring-neutral-900',
@@ -141,6 +143,7 @@ const TONES = {
     body: 'text-neutral-300',
     button: 'bg-[var(--color-cta)] text-neutral-950 hover:brightness-110',
     badge: 'bg-[var(--color-cta)] text-neutral-950',
+    bullet: 'bg-[var(--color-cta)]',
   },
 } as const
 
@@ -197,7 +200,7 @@ function PriceCard({
           <li key={bullet} className="flex items-start gap-3">
             <span
               aria-hidden="true"
-              className="mt-1 inline-block size-2 rounded-full bg-[var(--color-cta)]"
+              className={`mt-1 inline-block size-2 rounded-full ${t.bullet}`}
             />
             <span>{bullet}</span>
           </li>
