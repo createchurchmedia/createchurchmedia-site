@@ -226,9 +226,9 @@ export default function SubscriptionPage() {
       {/* Pricing cards */}
       <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
-        {/* Desktop: one connected row. The taller middle card sits on top, extends 24px
-            above and below the side cards, and hides their inner edges. Phones:
-            separate stacked cards. */}
+        {/* Desktop: one connected row. The middle card sits on top, rises 24px above the
+            side cards, and hides their inner edges. All bottoms (and buttons) line up.
+            Phones: separate stacked cards. */}
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:gap-0">
           <PriceCard
             header="Annual prepay"
@@ -249,7 +249,7 @@ export default function SubscriptionPage() {
             cta="Start the 6-month plan"
             badge="10%"
             tone="dark"
-            className="z-10 lg:-my-6"
+            className="z-10 lg:-mt-6"
           />
           <PriceCard
             header="Monthly"
