@@ -54,15 +54,16 @@ export const siteConfig = {
   googleReviewUrl: '',
 } as const
 
-// Header links. Sign up is the yellow header button (signUpPageUrl), not a link here.
+// The plans page.
+export const signUpPageUrl = '/subscribe'
+
+// Header links (desktop and phone menu). The header has no button.
 export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/how-it-works', label: 'How it works' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: signUpPageUrl, label: 'Sign up' },
 ] as const
-
-// The plans page. The yellow header button links here.
-export const signUpPageUrl = '/subscribe'
 
 export const footerItems = [
   { href: '/', label: 'Home' },
