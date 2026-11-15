@@ -62,13 +62,13 @@ export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/how-it-works', label: 'How it works' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: signUpPageUrl, label: 'Sign up' },
+  { href: signUpPageUrl, label: 'Subscribe' },
 ] as const
 
 export const footerItems = [
   { href: '/', label: 'Home' },
   { href: '/how-it-works', label: 'How it works' },
-  { href: signUpPageUrl, label: 'Sign up' },
+  { href: signUpPageUrl, label: 'Subscribe' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/resources', label: 'Resources' },

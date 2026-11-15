@@ -11,7 +11,7 @@ import { siteConfig } from '@/lib/site-config'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sign up',
+  title: 'Subscribe',
   description:
     'One flat fee. Unlimited graphic design for churches. $697 per month, $3,765 for 6 months, or $6,690 annual prepay. Same designer, same access, same turnaround.',
   path: '/subscribe',
@@ -215,7 +215,7 @@ export default function SubscriptionPage() {
       <ServiceJsonLd />
       <FaqJsonLd faqs={FAQS} />
 
-      <PageIntro eyebrow="One flat fee" title="Sign up.">
+      <PageIntro eyebrow="One flat fee" title="Subscribe.">
         <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
         <p className="mt-4">
           A flat subscription, monthly, 6-month, or annual, with a standard seven-day turnaround. Same-day is possible depending on my availability, but not guaranteed. One designer who answers her own messages. Revisions are part of the deal.
